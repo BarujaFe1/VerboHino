@@ -189,7 +189,7 @@ A maneira mais rápida de experimentar o **Verbo & Hino** é baixar o APK e inst
 ## 📥 Downloads
 
 - **APK (última versão):** [Download Verbo & Hino.apk](https://expo.dev/accounts/seu-usuario/projects/Verbo-Hino/builds/ultimo-apk)  
-- **Slide de apresentação do projeto:** [Ver PDF](./docs/slide_verbo_e_hino.pdf)
+- **Slide de apresentação do projeto:** [Ver PDF](./assets/slide_verbo_e_hino.pdf)
 
 > *Links atualizados conforme novas versões são lançadas.*
 
