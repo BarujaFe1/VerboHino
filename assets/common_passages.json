@@ -1,0 +1,1706 @@
+[
+  {
+    "passage": "I Pedro - 1",
+    "count": 12.0
+  },
+  {
+    "passage": "Colossenses - 3",
+    "count": 7.0
+  },
+  {
+    "passage": "II Timóteo - 4",
+    "count": 7.0
+  },
+  {
+    "passage": "Mateus - 11",
+    "count": 7.0
+  },
+  {
+    "passage": "Filipenses - 4",
+    "count": 6.0
+  },
+  {
+    "passage": "Hebreus - 12",
+    "count": 6.0
+  },
+  {
+    "passage": "I Coríntios - 2",
+    "count": 6.0
+  },
+  {
+    "passage": "Lucas - 24:13",
+    "count": 6.0
+  },
+  {
+    "passage": "Mateus - 5",
+    "count": 6.0
+  },
+  {
+    "passage": "Salmos - 133",
+    "count": 6.0
+  },
+  {
+    "passage": "Efésios - 1",
+    "count": 5.0
+  },
+  {
+    "passage": "I Coríntios - 13",
+    "count": 5.0
+  },
+  {
+    "passage": "II Pedro - 1",
+    "count": 5.0
+  },
+  {
+    "passage": "Josué - 1",
+    "count": 5.0
+  },
+  {
+    "passage": "Marcos - 16",
+    "count": 5.0
+  },
+  {
+    "passage": "Romanos - 12",
+    "count": 5.0
+  },
+  {
+    "passage": "Atos - 9",
+    "count": 4.0
+  },
+  {
+    "passage": "Filipenses - 2",
+    "count": 4.0
+  },
+  {
+    "passage": "Hebreus - 10",
+    "count": 4.0
+  },
+  {
+    "passage": "I Tessalonicenses - 5",
+    "count": 4.0
+  },
+  {
+    "passage": "II Coríntios - 5",
+    "count": 4.0
+  },
+  {
+    "passage": "João - 1",
+    "count": 4.0
+  },
+  {
+    "passage": "João - 13",
+    "count": 4.0
+  },
+  {
+    "passage": "João - 14",
+    "count": 4.0
+  },
+  {
+    "passage": "João - 5",
+    "count": 4.0
+  },
+  {
+    "passage": "Lucas - 15:11",
+    "count": 4.0
+  },
+  {
+    "passage": "Lucas - 17:11",
+    "count": 4.0
+  },
+  {
+    "passage": "Lucas - 7:36",
+    "count": 4.0
+  },
+  {
+    "passage": "Mateus - 13",
+    "count": 4.0
+  },
+  {
+    "passage": "Mateus - 7",
+    "count": 4.0
+  },
+  {
+    "passage": "Romanos - 7",
+    "count": 4.0
+  },
+  {
+    "passage": "Romanos - 8",
+    "count": 4.0
+  },
+  {
+    "passage": "Romanos - 8:31",
+    "count": 4.0
+  },
+  {
+    "passage": "Salmos - 19",
+    "count": 4.0
+  },
+  {
+    "passage": "Atos - 12",
+    "count": 3.0
+  },
+  {
+    "passage": "Atos - 4:32",
+    "count": 3.0
+  },
+  {
+    "passage": "Colossenses - 2",
+    "count": 3.0
+  },
+  {
+    "passage": "Eclesiastes - 11",
+    "count": 3.0
+  },
+  {
+    "passage": "Eclesiastes - 3",
+    "count": 3.0
+  },
+  {
+    "passage": "Efésios - 2",
+    "count": 3.0
+  },
+  {
+    "passage": "Efésios - 4",
+    "count": 3.0
+  },
+  {
+    "passage": "Filipenses - 1",
+    "count": 3.0
+  },
+  {
+    "passage": "Gênesis - 28:10",
+    "count": 3.0
+  },
+  {
+    "passage": "Hebreus - 1",
+    "count": 3.0
+  },
+  {
+    "passage": "Hebreus - 10:19",
+    "count": 3.0
+  },
+  {
+    "passage": "Hebreus - 4",
+    "count": 3.0
+  },
+  {
+    "passage": "II Coríntios - 4:16",
+    "count": 3.0
+  },
+  {
+    "passage": "II Pedro - 3",
+    "count": 3.0
+  },
+  {
+    "passage": "II Reis - 4",
+    "count": 3.0
+  },
+  {
+    "passage": "II Reis - 6",
+    "count": 3.0
+  },
+  {
+    "passage": "II Timóteo - 2",
+    "count": 3.0
+  },
+  {
+    "passage": "Isaías - 9",
+    "count": 3.0
+  },
+  {
+    "passage": "João - 15",
+    "count": 3.0
+  },
+  {
+    "passage": "João - 20",
+    "count": 3.0
+  },
+  {
+    "passage": "João - 20:19",
+    "count": 3.0
+  },
+  {
+    "passage": "João - 9",
+    "count": 3.0
+  },
+  {
+    "passage": "Jonas - 1",
+    "count": 3.0
+  },
+  {
+    "passage": "Lucas - 10:25",
+    "count": 3.0
+  },
+  {
+    "passage": "Lucas - 22:39",
+    "count": 3.0
+  },
+  {
+    "passage": "Mateus - 13:44",
+    "count": 3.0
+  },
+  {
+    "passage": "Mateus - 4",
+    "count": 3.0
+  },
+  {
+    "passage": "Romanos - 6",
+    "count": 3.0
+  },
+  {
+    "passage": "Salmos - 1",
+    "count": 3.0
+  },
+  {
+    "passage": "Salmos - 126",
+    "count": 3.0
+  },
+  {
+    "passage": "Salmos - 23",
+    "count": 3.0
+  },
+  {
+    "passage": "Salmos - 40",
+    "count": 3.0
+  },
+  {
+    "passage": "Salmos - 46",
+    "count": 3.0
+  },
+  {
+    "passage": "Salmos - 49",
+    "count": 3.0
+  },
+  {
+    "passage": "Salmos - 90",
+    "count": 3.0
+  },
+  {
+    "passage": "Salmos - 91",
+    "count": 3.0
+  },
+  {
+    "passage": "Apocalipse - 7:9",
+    "count": 2.0
+  },
+  {
+    "passage": "Atos - 2",
+    "count": 2.0
+  },
+  {
+    "passage": "Atos - 28",
+    "count": 2.0
+  },
+  {
+    "passage": "Colossenses - 1",
+    "count": 2.0
+  },
+  {
+    "passage": "Daniel - 12",
+    "count": 2.0
+  },
+  {
+    "passage": "Efésios - 3",
+    "count": 2.0
+  },
+  {
+    "passage": "Efésios - 5",
+    "count": 2.0
+  },
+  {
+    "passage": "Efésios - 6:10",
+    "count": 2.0
+  },
+  {
+    "passage": "Ester - 6",
+    "count": 2.0
+  },
+  {
+    "passage": "Êxodo - 17",
+    "count": 2.0
+  },
+  {
+    "passage": "Êxodo - 33:12",
+    "count": 2.0
+  },
+  {
+    "passage": "Filipenses - 4:10",
+    "count": 2.0
+  },
+  {
+    "passage": "Gênesis - 50:14",
+    "count": 2.0
+  },
+  {
+    "passage": "Habacuque - 3",
+    "count": 2.0
+  },
+  {
+    "passage": "Hebreus - 11",
+    "count": 2.0
+  },
+  {
+    "passage": "Hebreus - 2",
+    "count": 2.0
+  },
+  {
+    "passage": "Hebreus - 4:14",
+    "count": 2.0
+  },
+  {
+    "passage": "Hebreus - 6",
+    "count": 2.0
+  },
+  {
+    "passage": "I Coríntios - 12",
+    "count": 2.0
+  },
+  {
+    "passage": "I Coríntios - 3",
+    "count": 2.0
+  },
+  {
+    "passage": "I Pedro - 5",
+    "count": 2.0
+  },
+  {
+    "passage": "I Samuel - 3",
+    "count": 2.0
+  },
+  {
+    "passage": "I Tessalonicenses - 4:13",
+    "count": 2.0
+  },
+  {
+    "passage": "II Coríntios - 12:11",
+    "count": 2.0
+  },
+  {
+    "passage": "II Coríntios - 2",
+    "count": 2.0
+  },
+  {
+    "passage": "II Crônicas - 26",
+    "count": 2.0
+  },
+  {
+    "passage": "II Samuel - 23",
+    "count": 2.0
+  },
+  {
+    "passage": "II Samuel - 9",
+    "count": 2.0
+  },
+  {
+    "passage": "Isaías - 5",
+    "count": 2.0
+  },
+  {
+    "passage": "Isaías - 53",
+    "count": 2.0
+  },
+  {
+    "passage": "Jeremias - 1",
+    "count": 2.0
+  },
+  {
+    "passage": "Jeremias - 18",
+    "count": 2.0
+  },
+  {
+    "passage": "Jó - 29",
+    "count": 2.0
+  },
+  {
+    "passage": "Jó - 42",
+    "count": 2.0
+  },
+  {
+    "passage": "João - 11",
+    "count": 2.0
+  },
+  {
+    "passage": "João - 16",
+    "count": 2.0
+  },
+  {
+    "passage": "João - 17",
+    "count": 2.0
+  },
+  {
+    "passage": "João - 4",
+    "count": 2.0
+  },
+  {
+    "passage": "João - 6:60",
+    "count": 2.0
+  },
+  {
+    "passage": "Juízes - 6:11",
+    "count": 2.0
+  },
+  {
+    "passage": "Lucas - 10",
+    "count": 2.0
+  },
+  {
+    "passage": "Lucas - 14:15",
+    "count": 2.0
+  },
+  {
+    "passage": "Lucas - 16",
+    "count": 2.0
+  },
+  {
+    "passage": "Lucas - 18",
+    "count": 2.0
+  },
+  {
+    "passage": "Lucas - 19",
+    "count": 2.0
+  },
+  {
+    "passage": "Lucas - 24",
+    "count": 2.0
+  },
+  {
+    "passage": "Lucas - 4:14",
+    "count": 2.0
+  },
+  {
+    "passage": "Lucas - 7",
+    "count": 2.0
+  },
+  {
+    "passage": "Lucas - 8:40",
+    "count": 2.0
+  },
+  {
+    "passage": "Marcos - 6:30",
+    "count": 2.0
+  },
+  {
+    "passage": "Mateus - 12:9",
+    "count": 2.0
+  },
+  {
+    "passage": "Mateus - 13:24",
+    "count": 2.0
+  },
+  {
+    "passage": "Mateus - 14:22",
+    "count": 2.0
+  },
+  {
+    "passage": "Mateus - 15:21",
+    "count": 2.0
+  },
+  {
+    "passage": "Mateus - 16",
+    "count": 2.0
+  },
+  {
+    "passage": "Mateus - 25",
+    "count": 2.0
+  },
+  {
+    "passage": "Mateus - 6",
+    "count": 2.0
+  },
+  {
+    "passage": "Mateus - 6:19",
+    "count": 2.0
+  },
+  {
+    "passage": "Mateus - 8:18",
+    "count": 2.0
+  },
+  {
+    "passage": "Provérbios - 27",
+    "count": 2.0
+  },
+  {
+    "passage": "Romanos - 8:18",
+    "count": 2.0
+  },
+  {
+    "passage": "Salmos - 116",
+    "count": 2.0
+  },
+  {
+    "passage": "Salmos - 125",
+    "count": 2.0
+  },
+  {
+    "passage": "Salmos - 139",
+    "count": 2.0
+  },
+  {
+    "passage": "Salmos - 16",
+    "count": 2.0
+  },
+  {
+    "passage": "Salmos - 57",
+    "count": 2.0
+  },
+  {
+    "passage": "Tito - 2",
+    "count": 2.0
+  },
+  {
+    "passage": "-16",
+    "count": 1.0
+  },
+  {
+    "passage": "Ageu - 2-1:9",
+    "count": 1.0
+  },
+  {
+    "passage": "Apocalipse - 12",
+    "count": 1.0
+  },
+  {
+    "passage": "Apocalipse - 13",
+    "count": 1.0
+  },
+  {
+    "passage": "Apocalipse - 21",
+    "count": 1.0
+  },
+  {
+    "passage": "Apocalipse - 22 \"A Nova Jerusalém\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Apocalipse - 3:7",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 10",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 12 Ancião Helio Bianco (Dracena)",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 13",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 17",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 20:17",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 23",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 28-1:10",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 3",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 5",
+    "count": 1.0
+  },
+  {
+    "passage": "Atos - 8",
+    "count": 1.0
+  },
+  {
+    "passage": "Cantares de Salomão - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "Colossenes - 3",
+    "count": 1.0
+  },
+  {
+    "passage": "Daniel - 1",
+    "count": 1.0
+  },
+  {
+    "passage": "Daniel - 6",
+    "count": 1.0
+  },
+  {
+    "passage": "Deuteronômio - 28",
+    "count": 1.0
+  },
+  {
+    "passage": "Deuteronômio - 28 (Ancião Antonio Alberto de Oliveira)",
+    "count": 1.0
+  },
+  {
+    "passage": "Eclesiastes - 10 \"a loucura é a causa de muitas desgraças\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Eclesiastes - 11 - Ancião Nene",
+    "count": 1.0
+  },
+  {
+    "passage": "Eclesiastes - 7",
+    "count": 1.0
+  },
+  {
+    "passage": "Eclesiastes - 7 \"as vantagens do sofrimento - da paciência e da moderação\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Efésios - 3 \"O ministério da vocação dos gentios e o apostolado de Paulo\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Efésios - 3:14",
+    "count": 1.0
+  },
+  {
+    "passage": "Efésios - 4 \"A unidade da Fé\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Efésios 2:11 \"os gentios e os judeus são unidos por Deus mediante a cruz de Cristo\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Efésios 3:14",
+    "count": 1.0
+  },
+  {
+    "passage": "Efésios 6:10",
+    "count": 1.0
+  },
+  {
+    "passage": "Esdras - 3:8",
+    "count": 1.0
+  },
+  {
+    "passage": "Esdras - 6",
+    "count": 1.0
+  },
+  {
+    "passage": "Ester - 1-1:9",
+    "count": 1.0
+  },
+  {
+    "passage": "Êxodo - 14",
+    "count": 1.0
+  },
+  {
+    "passage": "Êxodo - 14-15:26",
+    "count": 1.0
+  },
+  {
+    "passage": "Êxodo - 14:15",
+    "count": 1.0
+  },
+  {
+    "passage": "Êxodo - 15-23:27",
+    "count": 1.0
+  },
+  {
+    "passage": "Êxodo - 15:23",
+    "count": 1.0
+  },
+  {
+    "passage": "Êxodo - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "Êxodo - 33",
+    "count": 1.0
+  },
+  {
+    "passage": "Êxodo - 7",
+    "count": 1.0
+  },
+  {
+    "passage": "Filemom",
+    "count": 1.0
+  },
+  {
+    "passage": "Filipenses - 1:12",
+    "count": 1.0
+  },
+  {
+    "passage": "Filipenses - 4-1:9",
+    "count": 1.0
+  },
+  {
+    "passage": "Gálatas - 4:21",
+    "count": 1.0
+  },
+  {
+    "passage": "Gálatas - 5",
+    "count": 1.0
+  },
+  {
+    "passage": "Gálatas - 6",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 1",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 13",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 13:7",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 22",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 37-1:4",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 39",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 47:13",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 49",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 50:22",
+    "count": 1.0
+  },
+  {
+    "passage": "Gênesis - 7-1:5",
+    "count": 1.0
+  },
+  {
+    "passage": "Hebreus - 1- Ancião Luiz Carlos Euclydes (BH)",
+    "count": 1.0
+  },
+  {
+    "passage": "Hebreus - 10 v 19",
+    "count": 1.0
+  },
+  {
+    "passage": "hebreus - 10:19 “exortação a perseverar a fé”",
+    "count": 1.0
+  },
+  {
+    "passage": "Hebreus - 11:23",
+    "count": 1.0
+  },
+  {
+    "passage": "Hebreus - 13",
+    "count": 1.0
+  },
+  {
+    "passage": "Hebreus - 3",
+    "count": 1.0
+  },
+  {
+    "passage": "Hebreus - 8",
+    "count": 1.0
+  },
+  {
+    "passage": "Hebreus - 9",
+    "count": 1.0
+  },
+  {
+    "passage": "I Coríntios - 1",
+    "count": 1.0
+  },
+  {
+    "passage": "I Coríntios - 10",
+    "count": 1.0
+  },
+  {
+    "passage": "I Coríntios - 12:28 e na sequência Coríntios 13",
+    "count": 1.0
+  },
+  {
+    "passage": "I Coríntios - 13 \"A suprema excelência da caridade\"",
+    "count": 1.0
+  },
+  {
+    "passage": "I Coríntios - 15",
+    "count": 1.0
+  },
+  {
+    "passage": "I Coríntios - 15:19",
+    "count": 1.0
+  },
+  {
+    "passage": "I Coríntios - 2 e - 1:26",
+    "count": 1.0
+  },
+  {
+    "passage": "I Coríntios - 9:15",
+    "count": 1.0
+  },
+  {
+    "passage": "I Crônicas - 16",
+    "count": 1.0
+  },
+  {
+    "passage": "I João - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "I João - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "I Pedro - 1:13",
+    "count": 1.0
+  },
+  {
+    "passage": "I Pedro - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "I Pedro - 3",
+    "count": 1.0
+  },
+  {
+    "passage": "I Pedro - 3:8 \"O amor fraternal; a paciência na aflição - segundo o exemplo de Cristo",
+    "count": 1.0
+  },
+  {
+    "passage": "I Pedro - 5 Ancião Cláudio Marçola (Araraquara)",
+    "count": 1.0
+  },
+  {
+    "passage": "I Reis - 18:22",
+    "count": 1.0
+  },
+  {
+    "passage": "I Reis - 19 (Anc Laércio Santim)",
+    "count": 1.0
+  },
+  {
+    "passage": "I Reis - 19 Anc Marçola",
+    "count": 1.0
+  },
+  {
+    "passage": "I Reis - 5",
+    "count": 1.0
+  },
+  {
+    "passage": "I Samuel - 1",
+    "count": 1.0
+  },
+  {
+    "passage": "I Samuel - 1:20",
+    "count": 1.0
+  },
+  {
+    "passage": "I Samuel - 1:9",
+    "count": 1.0
+  },
+  {
+    "passage": "I Samuel - 16",
+    "count": 1.0
+  },
+  {
+    "passage": "I Samuel - 16-1:13",
+    "count": 1.0
+  },
+  {
+    "passage": "I Samuel - 16:14",
+    "count": 1.0
+  },
+  {
+    "passage": "I Samuel - 17:12",
+    "count": 1.0
+  },
+  {
+    "passage": "I Samuel - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "I Samuel - 7",
+    "count": 1.0
+  },
+  {
+    "passage": "I Tessalonicenses - 1",
+    "count": 1.0
+  },
+  {
+    "passage": "I Tessalonicenses - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "I Timóteo - 6",
+    "count": 1.0
+  },
+  {
+    "passage": "II Coríntios - 1",
+    "count": 1.0
+  },
+  {
+    "passage": "II Coríntios - 11 (Ancião Hildebrando Maciel)",
+    "count": 1.0
+  },
+  {
+    "passage": "II Coríntios - 11:16",
+    "count": 1.0
+  },
+  {
+    "passage": "II Coríntios - 12",
+    "count": 1.0
+  },
+  {
+    "passage": "II Coríntios - 13",
+    "count": 1.0
+  },
+  {
+    "passage": "II Coríntios - 3",
+    "count": 1.0
+  },
+  {
+    "passage": "II Coríntios - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "II Coríntios - 6:11",
+    "count": 1.0
+  },
+  {
+    "passage": "II Coríntios - 7",
+    "count": 1.0
+  },
+  {
+    "passage": "II Crônicas - 32",
+    "count": 1.0
+  },
+  {
+    "passage": "II Pedro - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "II Reis - 2-8:11",
+    "count": 1.0
+  },
+  {
+    "passage": "II Reis - 22",
+    "count": 1.0
+  },
+  {
+    "passage": "II Reis - 4-8:17",
+    "count": 1.0
+  },
+  {
+    "passage": "II Reis - 4:8",
+    "count": 1.0
+  },
+  {
+    "passage": "II Reis - 5 Anc MauryGomes (Ilha Solteira)",
+    "count": 1.0
+  },
+  {
+    "passage": "II Reis - 5:9 Anc Elias Alves do Morro Alto",
+    "count": 1.0
+  },
+  {
+    "passage": "II Reis - 8",
+    "count": 1.0
+  },
+  {
+    "passage": "II Samuel - 18:9",
+    "count": 1.0
+  },
+  {
+    "passage": "II Timóteo - 4:6",
+    "count": 1.0
+  },
+  {
+    "passage": "III João - 1",
+    "count": 1.0
+  },
+  {
+    "passage": "Isaías - 38",
+    "count": 1.0
+  },
+  {
+    "passage": "Isaías - 49:7",
+    "count": 1.0
+  },
+  {
+    "passage": "Isaías - 52",
+    "count": 1.0
+  },
+  {
+    "passage": "Isaías - 60",
+    "count": 1.0
+  },
+  {
+    "passage": "Isaías - 9-1:7",
+    "count": 1.0
+  },
+  {
+    "passage": "Jeremias - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "Jeremias 18 - Ancião Joãosinho Cardozo Filho (Barra Bonita)",
+    "count": 1.0
+  },
+  {
+    "passage": "Jó - 1",
+    "count": 1.0
+  },
+  {
+    "passage": "Jó - 18",
+    "count": 1.0
+  },
+  {
+    "passage": "Jó - 28-5:6",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 1 Ancião Luiz Euclydes BH",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 10",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 10 - \"Jesus o Bom Pastor\"",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 11-34:45 Ancião Thiago Lungareze (Manaus)",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 12",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 15 \"continuação das últimas instruções aos discípulos; união íntima entre Jersus e os crentes\"",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 15.",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 17 \"Oração de Jesus pelos seus discípulos\"",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 18",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 21 Pesca Marvilhosa",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 3",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 5:16 \"Jesus declara-se filho de Deus e igual ao pai\"",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 6",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 7",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 8",
+    "count": 1.0
+  },
+  {
+    "passage": "João - 8-47:59",
+    "count": 1.0
+  },
+  {
+    "passage": "Joel - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "Josué - 3",
+    "count": 1.0
+  },
+  {
+    "passage": "Josué - 6 \"Jericó é destruída; Raabe é salva\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Judas",
+    "count": 1.0
+  },
+  {
+    "passage": "Juízes - 15:14",
+    "count": 1.0
+  },
+  {
+    "passage": "Juízes - 16:16",
+    "count": 1.0
+  },
+  {
+    "passage": "Juízes - 6",
+    "count": 1.0
+  },
+  {
+    "passage": "Lamentações de Jeremias - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 1",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 1-1:25",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 10-25:37",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 10:13",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 10:38",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 11:33",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 12:13",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 12:22",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 13:6",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 14:25",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 15 \"Parábola da ovelha e da dracma perdidas\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 16-14:31",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 16:1-13",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 17",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 18:9",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 19 \"Zaqueu o publicano\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 19:28",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 21:20",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 21:5",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 22:31",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 22:7",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 23:33",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 5",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 5:12",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 6:36",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 7 Ancião Luiz Carlos Euclydes (BH)",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 7:11",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 7:18",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 9:46",
+    "count": 1.0
+  },
+  {
+    "passage": "Lucas - 9:51",
+    "count": 1.0
+  },
+  {
+    "passage": "Malaquias - 3",
+    "count": 1.0
+  },
+  {
+    "passage": "Marcos - 10:13 Ancião Luiz Carlos",
+    "count": 1.0
+  },
+  {
+    "passage": "Marcos - 11",
+    "count": 1.0
+  },
+  {
+    "passage": "Marcos - 12:28",
+    "count": 1.0
+  },
+  {
+    "passage": "Marcos - 12:42",
+    "count": 1.0
+  },
+  {
+    "passage": "Marcos - 14:32",
+    "count": 1.0
+  },
+  {
+    "passage": "Marcos - 2 \"O paralítico de Capernaum\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Marcos - 4-35:41",
+    "count": 1.0
+  },
+  {
+    "passage": "Marcos - 5",
+    "count": 1.0
+  },
+  {
+    "passage": "Marcos - 5 Ancião Salvador Bueno (Água Rasa)",
+    "count": 1.0
+  },
+  {
+    "passage": "Marcos - 5:21",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 1:18",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 10-16:22 (Ancião Hélio Bianco Dracena)",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 11:20",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 11:20 \"As três cidades impenitentes\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 11:25",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 12:33",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 13:24 Ancião Marcos da Silva Roberto (Curuçá)",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 13:44 Ancião Salvador (Água Rasa)",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 18:23",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 19:16",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 22:15",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 23",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 24",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 24-15:28",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 25:31",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 26-6:13",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 27:32",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 28",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 5:13",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 6-1:18 ensinamento sobre a Oração do Pai Nosso",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 6:25",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 7:12",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 8",
+    "count": 1.0
+  },
+  {
+    "passage": "Mateus - 9-14:17",
+    "count": 1.0
+  },
+  {
+    "passage": "Miquéias - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "Miquéias - 7",
+    "count": 1.0
+  },
+  {
+    "passage": "Neemias - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "Neemias - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "Neemias - 6",
+    "count": 1.0
+  },
+  {
+    "passage": "Neemias - 8",
+    "count": 1.0
+  },
+  {
+    "passage": "Números - 14",
+    "count": 1.0
+  },
+  {
+    "passage": "Números - 20:14",
+    "count": 1.0
+  },
+  {
+    "passage": "Oséias - 11",
+    "count": 1.0
+  },
+  {
+    "passage": "Provérbios - 15",
+    "count": 1.0
+  },
+  {
+    "passage": "Provérbios - 25",
+    "count": 1.0
+  },
+  {
+    "passage": "Provérbios - 3",
+    "count": 1.0
+  },
+  {
+    "passage": "Romanos - 11:33",
+    "count": 1.0
+  },
+  {
+    "passage": "Romanos - 13:8",
+    "count": 1.0
+  },
+  {
+    "passage": "Romanos - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "Romanos - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "Romanos - 5",
+    "count": 1.0
+  },
+  {
+    "passage": "Romanos - 5 (Anc Luiz Carlos)",
+    "count": 1.0
+  },
+  {
+    "passage": "Romanos - 5:1:11",
+    "count": 1.0
+  },
+  {
+    "passage": "Rute - 2",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 100",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 119-25:32",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 119:17:24",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 119:73",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 119:97",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 121",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 122",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 127",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 128",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 13",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 131",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 134",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 137",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 138",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 140",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 141",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 144",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 147",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 15",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 150",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 16 \"a felicidade do crente e a certeza da vida eterna\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 19 - Ancião Salvador Bueno",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 24",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 26",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 30",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 33",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 34",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 39",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 40 \"Deus ouve a alma paciente; a obediência é melhor que o sacrifício\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 43",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 45",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 51",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 73",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 73 (Anc. Hélio Bianco)",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 80",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 84 Ancião Salvador Bueno (Água Rasa)",
+    "count": 1.0
+  },
+  {
+    "passage": "Salmos - 91 Ancião Norival Marques (Brás)",
+    "count": 1.0
+  },
+  {
+    "passage": "Tiago - 1",
+    "count": 1.0
+  },
+  {
+    "passage": "Tiago - 3:13",
+    "count": 1.0
+  },
+  {
+    "passage": "Tiago - 4",
+    "count": 1.0
+  },
+  {
+    "passage": "Tiago - 4:13",
+    "count": 1.0
+  },
+  {
+    "passage": "Tiago - 5:7",
+    "count": 1.0
+  },
+  {
+    "passage": "Tiago - 7 \"Exortação à paciência - acerca do juramento - da oração e da conversão de pecadores\"",
+    "count": 1.0
+  },
+  {
+    "passage": "Zacarias - 3",
+    "count": 1.0
+  }
+]

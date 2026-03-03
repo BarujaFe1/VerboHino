@@ -1,0 +1,35 @@
+{
+  "expo": {
+    "name": "Verbo & Hino",
+    "slug": "quiz-biblia-hinario",
+    "version": "2.0.0",
+    "orientation": "portrait",
+    "userInterfaceStyle": "automatic",
+    "icon": "./assets/icon.png",
+    "splash": {
+      "image": "./assets/splash.png",
+      "resizeMode": "contain",
+      "backgroundColor": "#13141f"
+    },
+    "assetBundlePatterns": [
+      "assets/**/*"
+    ],
+    "android": {
+      "package": "com.seuapp.quizbibliahinario",
+      "versionCode": 2,
+      "adaptiveIcon": {
+        "foregroundImage": "./assets/adaptive-icon.png",
+        "backgroundColor": "#13141f"
+      }
+    },
+    "ios": {
+      "bundleIdentifier": "com.seuapp.quizbibliahinario",
+      "buildNumber": "2.0.0"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "ae438b4d-3989-4b6e-ac12-17fe88ad2f33"
+      }
+    }
+  }
+}
