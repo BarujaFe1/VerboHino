@@ -1,5 +1,9 @@
-﻿node_modules/
-.expo/
-.expo-shared/
-.DS_Store
-*.log
+﻿android/local.properties
+*.keystore
+*.jks
+*.apk
+*.aab
+node_modules/
+android/.cxx/
+android/build/
+android/app/build/
