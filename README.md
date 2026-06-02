@@ -1,17 +1,18 @@
-
 <div align="center">
   <img src="./assets/icon.png" alt="Verbo & Hino Logo" width="120" height="120" />
+
   <h1>Verbo & Hino</h1>
-  <p><strong>Gamificando o aprendizado cristão</strong></p>
 
   <p>
-    <a href="#sobre-o-projeto">Sobre</a> •
-    <a href="#funcionalidades">Funcionalidades</a> •
-    <a href="#tecnologias">Tecnologias</a> •
-    <a href="#instalação-direta-apk">APK</a> •
-    <a href="#como-executar">Como executar</a> •
-    <a href="#build-e-publicação">Build</a> •
-    <a href="#downloads">Downloads</a>
+    <strong>Gamificando o aprendizado cristão</strong><br />
+    <em>Gamifying Christian learning</em>
+  </p>
+
+  <p>
+    <a href="#pt-br">🇧🇷 Português</a> •
+    <a href="#english">🇺🇸 English</a> •
+    <a href="#downloads">Downloads</a> •
+    <a href="#license--licença">License / Licença</a>
   </p>
 
   <p>
@@ -24,9 +25,15 @@
 
 ---
 
+<a id="pt-br"></a>
+
+# 🇧🇷 Português
+
 ## 📖 Sobre o projeto
 
-**Verbo & Hino** é um aplicativo mobile que transforma o estudo da Bíblia e do Hinário da CCB em uma experiência divertida e desafiadora através de quizzes. Com uma interface moderna, minimalista e inspirada no estilo Apple, o app oferece três modos de jogo, níveis de dificuldade e estatísticas detalhadas para acompanhar seu progresso.
+**Verbo & Hino** é um aplicativo mobile criado para transformar o estudo da **Bíblia** e do **Hinário da CCB** em uma experiência interativa, leve e desafiadora.
+
+A proposta do app é unir aprendizado cristão, gamificação e uma interface moderna inspirada no estilo Apple, oferecendo quizzes, modos de jogo, níveis de dificuldade, histórico de desempenho e estatísticas locais para acompanhar a evolução do usuário.
 
 > “Conhecereis a verdade, e a verdade vos libertará.” — João 8:32
 
@@ -34,77 +41,101 @@
 
 ## ✨ Funcionalidades
 
-### 🎮 Tipos de Quiz
-- **Bíblia:** um versículo é exibido e você deve escolher a referência correta (Livro capítulo:verso).
-- **Hinário:** uma estrofe é exibida e você deve identificar o hino correto (Nº — Título).
+### 🎮 Tipos de quiz
+
+- **Bíblia:** o app exibe um versículo e o jogador deve escolher a referência correta.
+- **Hinário:** o app exibe uma estrofe e o jogador deve identificar o número e o título do hino correspondente.
 
 ### 🧠 Níveis de dificuldade
-- **Fácil / Médio / Difícil** — balanceados com base na popularidade dos versículos e hinos.
+
+- **Fácil**
+- **Médio**
+- **Difícil**
+
+Os níveis são balanceados com base na popularidade e recorrência dos versículos e hinos.
 
 ### 🕹️ Modos de jogo
-- **Clássico:** fluxo contínuo, treino livre.
-- **Sobrevivência:** comece com 3 vidas; cada erro reduz uma vida.
-- **Relógio (Time Attack):** tempo limitado por pergunta; o tempo esgotado conta como erro.
+
+- **Clássico:** fluxo contínuo para treino livre.
+- **Sobrevivência:** o jogador começa com 3 vidas; cada erro reduz uma vida.
+- **Relógio / Time Attack:** cada pergunta possui tempo limitado; tempo esgotado conta como erro.
 
 ### 🔥 Mecânicas especiais
-- Pontuação por acerto e **streak** (sequência de acertos).
-- **Multiplicador** (x2 após uma sequência).
+
+- Pontuação por acerto.
+- Sistema de **streak** para sequência de respostas corretas.
+- **Multiplicador x2** após boa sequência de acertos.
 - Ajudas estratégicas:
-  - **50/50:** remove duas alternativas erradas.
-  - **Dica:** mostra o testamento (Bíblia) ou a faixa de números (Hinário).
+  - **50/50:** remove duas alternativas incorretas.
+  - **Dica:** mostra o testamento, no quiz bíblico, ou a faixa de numeração, no quiz do hinário.
 
 ### 📊 Estatísticas e histórico
-- Histórico local com todos os seus resultados (tipo, acerto/erro, modo, dificuldade, timestamp).
-- Gráfico dos **Top 5** e tabela dos **Top 15** (Bíblia e Hinário separadamente).
-- Exportação para **JSON** e **CSV**.
+
+- Histórico local com resultados por tipo, modo, dificuldade, acerto/erro e data.
+- Gráfico dos **Top 5** resultados.
+- Tabela dos **Top 15** resultados.
+- Separação entre estatísticas da Bíblia e do Hinário.
+- Exportação do histórico em **JSON** e **CSV**.
 - Importação de histórico para restaurar ou mesclar dados.
 
 ### 🎨 Experiência do usuário
-- UI “Apple-like”: cards arredondados, tipografia limpa, espaçamento generoso.
-- Animações sutis e feedback tátil (vibração) em acertos/erros.
-- Sons opcionais (correct.mp3 / wrong.mp3).
-- Tema **claro/escuro** automático ou manual.
+
+- Interface moderna, minimalista e limpa.
+- Cards arredondados, boa hierarquia visual e espaçamento confortável.
+- Tema claro/escuro automático ou manual.
+- Animações sutis.
+- Feedback tátil em acertos e erros.
+- Sons opcionais para respostas corretas e incorretas.
 
 ---
 
 ## 🚀 Tecnologias utilizadas
 
-- [Expo (managed)](https://expo.dev/) — desenvolvimento rápido e compatível com Expo Go.
-- [React Native](https://reactnative.dev/) — base do aplicativo.
-- [React Navigation](https://reactnavigation.org/) — navegação entre telas.
-- [React Native Paper](https://callstack.github.io/react-native-paper/) — componentes UI prontos e temas.
-- [AsyncStorage](https://react-native-async-storage.github.io/async-storage/) — persistência local.
-- [React Native Chart Kit](https://github.com/indiespirit/react-native-chart-kit) + [React Native SVG](https://github.com/react-native-svg/react-native-svg) — gráficos estatísticos.
-- [Expo AV](https://docs.expo.dev/versions/latest/sdk/av/) — reprodução de áudio (opcional).
-- [Expo Sharing](https://docs.expo.dev/versions/latest/sdk/sharing/), [FileSystem](https://docs.expo.dev/versions/latest/sdk/filesystem/), [DocumentPicker](https://docs.expo.dev/versions/latest/sdk/document-picker/) — exportação/importação de arquivos.
+- [Expo Managed Workflow](https://expo.dev/)
+- [React Native](https://reactnative.dev/)
+- [React Navigation](https://reactnavigation.org/)
+- [React Native Paper](https://callstack.github.io/react-native-paper/)
+- [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+- [React Native Chart Kit](https://github.com/indiespirit/react-native-chart-kit)
+- [React Native SVG](https://github.com/react-native-svg/react-native-svg)
+- [Expo AV](https://docs.expo.dev/versions/latest/sdk/av/)
+- [Expo Sharing](https://docs.expo.dev/versions/latest/sdk/sharing/)
+- [Expo FileSystem](https://docs.expo.dev/versions/latest/sdk/filesystem/)
+- [Expo DocumentPicker](https://docs.expo.dev/versions/latest/sdk/document-picker/)
 
 ---
 
 ## 📁 Estrutura de pastas
 
-```
-Verbo&Hino/
-├── assets/                     # Imagens, fontes, JSONs, áudios
-│   ├── arc.json                 # Bíblia completa
-│   ├── hinario_pronto.json      # Hinário completo
-│   ├── common_passages.json     # Passagens mais frequentes
-│   ├── common_hymns.json        # Hinos mais frequentes
-│   ├── audio/                    # correct.mp3, wrong.mp3
-│   └── icon.png / splash.png     # Branding
+```txt
+Verbo-Hino/
+├── assets/
+│   ├── arc.json
+│   ├── hinario_pronto.json
+│   ├── common_passages.json
+│   ├── common_hymns.json
+│   ├── icon.png
+│   ├── splash.png
+│   ├── audio/
+│   │   ├── correct.mp3
+│   │   └── wrong.mp3
+│   └── screenshots/
+│       ├── gameplay.png
+│       └── stats.png
 ├── src/
 │   ├── screens/
-│   │   ├── GameScreen.js         # Tela principal do jogo
-│   │   └── StatsScreen.js        # Tela de estatísticas
+│   │   ├── GameScreen.js
+│   │   └── StatsScreen.js
 │   ├── utils/
-│   │   ├── dataLoader.js         # Carrega e prepara os pools de perguntas
-│   │   ├── questionFactory.js    # Gera perguntas com distratores
-│   │   ├── statistics.js         # Agregação de dados do histórico
-│   │   ├── exporters.js          # Exportação/importação JSON/CSV
-│   │   └── preferences.js        # Preferências (tema, som)
+│   │   ├── dataLoader.js
+│   │   ├── questionFactory.js
+│   │   ├── statistics.js
+│   │   ├── exporters.js
+│   │   └── preferences.js
 │   ├── data/
-│   │   └── rawList.js            # Lista bruta de referências bíblicas
-│   ├── theme.js                  # Configuração de temas (claro/escuro)
-│   └── App.js                    # Entry point, navegação e contextos
+│   │   └── rawList.js
+│   ├── theme.js
+│   └── App.js
 ├── .gitignore
 ├── app.json
 ├── package.json
@@ -113,115 +144,409 @@ Verbo&Hino/
 
 ---
 
-## 📲 Instalação direta (APK)
+## 📲 Instalação direta via APK
 
-A maneira mais rápida de experimentar o **Verbo & Hino** é baixar o APK e instalar diretamente no seu celular Android.
+A forma mais simples de testar o **Verbo & Hino** é instalar o APK diretamente em um dispositivo Android.
 
-1. **Baixe o APK** na seção [Downloads](#downloads) abaixo.
-2. No seu celular, permita a instalação de apps de fontes desconhecidas (geralmente em *Configurações > Segurança*).
-3. Abra o arquivo baixado e clique em **Instalar**.
-4. Pronto! Agora é só abrir o app e começar a jogar.
+1. Baixe o APK na seção [Downloads](#downloads).
+2. No Android, permita a instalação de apps de fontes desconhecidas, caso necessário.
+3. Abra o arquivo baixado.
+4. Toque em **Instalar**.
+5. Abra o app e comece a jogar.
 
-> 💡 *O APK é gerado automaticamente a cada nova versão. Você sempre encontrará o link atualizado na seção de downloads.*
+> 💡 O link do APK pode ser atualizado conforme novas versões forem publicadas.
 
 ---
 
-## ⚙️ Como executar o projeto (para desenvolvedores)
+## ⚙️ Como executar o projeto
 
 ### Pré-requisitos
 
-- Node.js (versão LTS recomendada)
-- Expo CLI (`npm install -g expo-cli`) ou use `npx expo`
-- Um dispositivo físico com **Expo Go** instalado ou um emulador configurado
+- Node.js em versão LTS.
+- Expo CLI instalado globalmente ou uso via `npx`.
+- Dispositivo físico com Expo Go ou emulador Android/iOS configurado.
 
-### Passos
+### Passo a passo
 
-1. Clone o repositório:
-   ```bash
-   git clone https://github.com/seu-usuario/Verbo-Hino.git
-   cd Verbo-Hino
-   ```
+Clone o repositório:
 
-2. Instale as dependências:
-   ```bash
-   npm install
-   ```
+```bash
+git clone https://github.com/BarujaFe1/Verbo-Hino.git
+cd Verbo-Hino
+```
 
-3. Inicie o projeto:
-   ```bash
-   npm start
-   # ou
-   expo start
-   ```
+Instale as dependências:
 
-4. Escaneie o QR Code com o aplicativo **Expo Go** (Android/iOS) ou pressione `a` para abrir no emulador Android.
+```bash
+npm install
+```
+
+Inicie o projeto:
+
+```bash
+npm start
+```
+
+Ou, se preferir:
+
+```bash
+npx expo start
+```
+
+Depois disso, escaneie o QR Code com o **Expo Go** ou abra o app em um emulador.
+
+---
+
+## 📦 Build e publicação
+
+### Gerar APK Android para testes
+
+Instale o EAS CLI:
+
+```bash
+npm install -g eas-cli
+```
+
+Configure o projeto:
+
+```bash
+eas build:configure
+```
+
+Gere um APK de prévia:
+
+```bash
+eas build --profile preview --platform android
+```
+
+### Gerar AAB para Play Store
+
+```bash
+eas build --profile production --platform android
+```
+
+O arquivo final ficará disponível no painel do Expo ou por meio do link gerado ao final do build.
 
 ---
 
-## 📲 Build e publicação
-
-### Gerar APK (Android)
-
-1. Instale o **EAS CLI**:
-   ```bash
-   npm install -g eas-cli
-   ```
-
-2. Configure o EAS (se ainda não fez):
-   ```bash
-   eas build:configure
-   ```
-
-3. Para gerar um **APK de teste**:
-   ```bash
-   eas build --profile preview --platform android
-   ```
-
-4. Para gerar um **AAB** para a Play Store:
-   ```bash
-   eas build --profile production --platform android
-   ```
-
-> O arquivo gerado estará disponível para download no site do Expo ou via link fornecido ao final do build.
-
----
+<a id="downloads"></a>
 
 ## 📥 Downloads
 
-- **APK (última versão):** [Download Verbo & Hino.apk](https://expo.dev/accounts/seu-usuario/projects/Verbo-Hino/builds/ultimo-apk)  
-- **Slide de apresentação do projeto:** [Ver PDF](./assets/slide.pdf)
+- **APK — última versão:** [Download Verbo & Hino.apk](https://expo.dev/accounts/seu-usuario/projects/Verbo-Hino/builds/ultimo-apk)
+- **Slide de apresentação:** [Ver PDF](./assets/slide.pdf)
 
-> *Links atualizados conforme novas versões são lançadas.*
+> Atualize estes links sempre que uma nova versão for publicada.
 
 ---
 
 ## 🤝 Contribuição
 
-Contribuições são sempre bem-vindas! Sinta-se à vontade para abrir uma **issue** ou enviar um **pull request**.
+Contribuições são bem-vindas.
 
-1. Faça um fork do projeto
-2. Crie uma branch para sua feature (`git checkout -b feature/nova-feature`)
-3. Commit suas mudanças (`git commit -m 'Adiciona nova feature'`)
-4. Push para a branch (`git push origin feature/nova-feature`)
-5. Abra um Pull Request
+1. Faça um fork do projeto.
+2. Crie uma branch para sua alteração:
 
----
+```bash
+git checkout -b feature/nova-feature
+```
 
-## 📄 Licença
+3. Faça o commit:
 
-Distribuído sob a licença MIT. Veja `LICENSE` para mais informações.
+```bash
+git commit -m "Adiciona nova feature"
+```
+
+4. Envie para o GitHub:
+
+```bash
+git push origin feature/nova-feature
+```
+
+5. Abra um Pull Request.
 
 ---
 
 ## 👨‍💻 Autor
 
-Desenvolvido por **BarujaFe**  
-[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)](https://github.com/BarujaFe1)  
+Desenvolvido por **BarujaFe**
+
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)](https://github.com/BarujaFe1)
 [![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/barujafe)
 
 ---
 
+<a id="english"></a>
+
+# 🇺🇸 English
+
+## 📖 About the project
+
+**Verbo & Hino** is a mobile app designed to turn the study of the **Bible** and the **CCB Hymnal** into an interactive, simple and challenging experience.
+
+The app combines Christian learning, gamification and a modern Apple-inspired interface, offering quizzes, game modes, difficulty levels, local performance history and statistics to help users track their progress.
+
+> “And ye shall know the truth, and the truth shall make you free.” — John 8:32
+
+---
+
+## ✨ Features
+
+### 🎮 Quiz types
+
+- **Bible:** the app displays a verse and the player must choose the correct reference.
+- **Hymnal:** the app displays a hymn excerpt and the player must identify the correct hymn number and title.
+
+### 🧠 Difficulty levels
+
+- **Easy**
+- **Medium**
+- **Hard**
+
+Difficulty levels are balanced according to the popularity and recurrence of Bible verses and hymns.
+
+### 🕹️ Game modes
+
+- **Classic:** continuous flow for free practice.
+- **Survival:** the player starts with 3 lives; each mistake removes one life.
+- **Time Attack:** each question has a time limit; running out of time counts as a wrong answer.
+
+### 🔥 Special mechanics
+
+- Score system based on correct answers.
+- **Streak** system for consecutive correct answers.
+- **x2 multiplier** after a strong sequence of correct answers.
+- Strategic assists:
+  - **50/50:** removes two incorrect alternatives.
+  - **Hint:** shows the testament in Bible mode or the hymn number range in Hymnal mode.
+
+### 📊 Statistics and history
+
+- Local history with results by quiz type, mode, difficulty, correctness and date.
+- **Top 5** chart.
+- **Top 15** results table.
+- Separate Bible and Hymnal statistics.
+- Export history as **JSON** and **CSV**.
+- Import history to restore or merge previous data.
+
+### 🎨 User experience
+
+- Modern, clean and minimalist interface.
+- Rounded cards, clear visual hierarchy and comfortable spacing.
+- Automatic or manual light/dark theme.
+- Subtle animations.
+- Haptic feedback for correct and wrong answers.
+- Optional sound effects for correct and wrong answers.
+
+---
+
+## 🚀 Tech stack
+
+- [Expo Managed Workflow](https://expo.dev/)
+- [React Native](https://reactnative.dev/)
+- [React Navigation](https://reactnavigation.org/)
+- [React Native Paper](https://callstack.github.io/react-native-paper/)
+- [AsyncStorage](https://react-native-async-storage.github.io/async-storage/)
+- [React Native Chart Kit](https://github.com/indiespirit/react-native-chart-kit)
+- [React Native SVG](https://github.com/react-native-svg/react-native-svg)
+- [Expo AV](https://docs.expo.dev/versions/latest/sdk/av/)
+- [Expo Sharing](https://docs.expo.dev/versions/latest/sdk/sharing/)
+- [Expo FileSystem](https://docs.expo.dev/versions/latest/sdk/filesystem/)
+- [Expo DocumentPicker](https://docs.expo.dev/versions/latest/sdk/document-picker/)
+
+---
+
+## 📁 Folder structure
+
+```txt
+Verbo-Hino/
+├── assets/
+│   ├── arc.json
+│   ├── hinario_pronto.json
+│   ├── common_passages.json
+│   ├── common_hymns.json
+│   ├── icon.png
+│   ├── splash.png
+│   ├── audio/
+│   │   ├── correct.mp3
+│   │   └── wrong.mp3
+│   └── screenshots/
+│       ├── gameplay.png
+│       └── stats.png
+├── src/
+│   ├── screens/
+│   │   ├── GameScreen.js
+│   │   └── StatsScreen.js
+│   ├── utils/
+│   │   ├── dataLoader.js
+│   │   ├── questionFactory.js
+│   │   ├── statistics.js
+│   │   ├── exporters.js
+│   │   └── preferences.js
+│   ├── data/
+│   │   └── rawList.js
+│   ├── theme.js
+│   └── App.js
+├── .gitignore
+├── app.json
+├── package.json
+└── README.md
+```
+
+---
+
+## 📲 Direct APK installation
+
+The easiest way to test **Verbo & Hino** is by installing the APK directly on an Android device.
+
+1. Download the APK from the [Downloads](#downloads) section.
+2. On Android, allow installation from unknown sources if required.
+3. Open the downloaded file.
+4. Tap **Install**.
+5. Open the app and start playing.
+
+> 💡 The APK link can be updated whenever a new version is released.
+
+---
+
+## ⚙️ Running the project
+
+### Requirements
+
+- Node.js LTS.
+- Expo CLI installed globally or usage through `npx`.
+- A physical device with Expo Go or a configured Android/iOS emulator.
+
+### Step by step
+
+Clone the repository:
+
+```bash
+git clone https://github.com/BarujaFe1/Verbo-Hino.git
+cd Verbo-Hino
+```
+
+Install dependencies:
+
+```bash
+npm install
+```
+
+Start the project:
+
+```bash
+npm start
+```
+
+Or:
+
+```bash
+npx expo start
+```
+
+Then scan the QR Code with **Expo Go** or open the app on an emulator.
+
+---
+
+## 📦 Build and release
+
+### Generate Android APK for testing
+
+Install EAS CLI:
+
+```bash
+npm install -g eas-cli
+```
+
+Configure the project:
+
+```bash
+eas build:configure
+```
+
+Generate a preview APK:
+
+```bash
+eas build --profile preview --platform android
+```
+
+### Generate AAB for Play Store
+
+```bash
+eas build --profile production --platform android
+```
+
+The final file will be available on the Expo dashboard or through the link generated at the end of the build.
+
+---
+
+## 📥 Downloads
+
+- **APK — latest version:** [Download Verbo & Hino.apk](https://expo.dev/accounts/seu-usuario/projects/Verbo-Hino/builds/ultimo-apk)
+- **Project presentation:** [View PDF](./assets/slide.pdf)
+
+> Update these links whenever a new version is released.
+
+---
+
+## 🤝 Contributing
+
+Contributions are welcome.
+
+1. Fork the project.
+2. Create a branch for your change:
+
+```bash
+git checkout -b feature/new-feature
+```
+
+3. Commit your changes:
+
+```bash
+git commit -m "Add new feature"
+```
+
+4. Push to GitHub:
+
+```bash
+git push origin feature/new-feature
+```
+
+5. Open a Pull Request.
+
+---
+
+## 👨‍💻 Author
+
+Developed by **BarujaFe**
+
+[![GitHub](https://img.shields.io/badge/-GitHub-181717?style=flat-square&logo=github)](https://github.com/BarujaFe1)
+[![LinkedIn](https://img.shields.io/badge/-LinkedIn-0077B5?style=flat-square&logo=linkedin)](https://linkedin.com/in/barujafe)
+
+---
+
+## 🖼️ Preview
+
 <p align="center">
-  <img src="./assets/screenshots/gameplay.png" alt="Gameplay preview" width="200" />
-  <img src="./assets/screenshots/stats.png" alt="Stats screen" width="200" />
+  <img src="./assets/screenshots/gameplay.png" alt="Gameplay preview" width="220" />
+  <img src="./assets/screenshots/stats.png" alt="Stats screen" width="220" />
 </p>
+
+---
+
+<a id="license--licença"></a>
+
+## 📄 License / Licença
+
+Distributed under the **MIT License**. See [`LICENSE`](./LICENSE) for more information.
+
+Distribuído sob a **Licença MIT**. Consulte [`LICENSE`](./LICENSE) para mais informações.
+
+---
+
+<div align="center">
+  <sub>
+    Built with React Native, Expo and care for a cleaner learning experience.<br />
+    Construído com React Native, Expo e cuidado para uma experiência de aprendizado mais limpa.
+  </sub>
+</div>
