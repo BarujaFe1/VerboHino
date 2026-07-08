@@ -7,3 +7,6 @@ node_modules/
 android/.cxx/
 android/build/
 android/app/build/
+.vercel
+dist/
+test/*.bundle.mjs

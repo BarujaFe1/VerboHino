@@ -42,6 +42,7 @@ export default function GameScreen({ navigation }) {
   // data
   const [loading, setLoading] = useState(true);
   const [loadError, setLoadError] = useState('');
+  const [dataReady, setDataReady] = useState(false);
   const [biblePool, setBiblePool] = useState([]);
   const [hymnPool, setHymnPool] = useState([]);
 
@@ -123,6 +124,7 @@ export default function GameScreen({ navigation }) {
 
         setBiblePool(biblePool);
         setHymnPool(hymnPool);
+        setDataReady(true);
         setLoading(false);
       } catch (e) {
         setLoading(false);
@@ -145,11 +147,12 @@ export default function GameScreen({ navigation }) {
     };
   }, []);
 
-  // reset game when settings change
+  // reset game when settings change or when data finishes loading
   useEffect(() => {
+    if (!dataReady) return;
     resetGame();
     // eslint-disable-next-line react-hooks/exhaustive-deps
-  }, [gameType, mode, difficulty]);
+  }, [gameType, mode, difficulty, dataReady]);
 
   // timeattack timer
   useEffect(() => {

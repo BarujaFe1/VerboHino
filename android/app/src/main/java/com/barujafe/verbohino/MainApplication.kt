@@ -1,4 +1,4 @@
-package com.seuapp.quizbibliahinario
+package com.barujafe.verbohino
 
 import android.app.Application
 import android.content.res.Configuration
@@ -27,11 +27,11 @@ class MainApplication : Application(), ReactApplication {
               // add(MyReactNativePackage())
             }
 
-          override fun getJSMainModuleName(): String = ".expo/.virtual-metro-entry"
+        override fun getJSMainModuleName(): String = ".expo/.virtual-metro-entry"
 
-          override fun getUseDeveloperSupport(): Boolean = BuildConfig.DEBUG
+        override fun getUseDeveloperSupport(): Boolean = BuildConfig.DEBUG
 
-          override val isNewArchEnabled: Boolean = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED
+        override val isNewArchEnabled: Boolean = BuildConfig.IS_NEW_ARCHITECTURE_ENABLED
       }
   )
 

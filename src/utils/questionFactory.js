@@ -60,39 +60,41 @@ function buildBibleDistractors({ pool, correct, difficulty }) {
     if (diffBook.length >= 3) candidates = diffBook;
   }
 
+  const refs = [...new Set(candidates.map((x) => x.ref))];
   const picked = new Set();
-  while (picked.size < 3 && candidates.length) {
-    const x = pickRandom(candidates);
-    picked.add(x.ref);
+  while (picked.size < 3 && picked.size < refs.length) {
+    picked.add(pickRandom(refs));
   }
   return Array.from(picked);
 }
 
 function buildHymnDistractors({ pool, correct, difficulty }) {
   const correctNum = correct.hymnNumero;
-  let candidates = pool.filter(x => x.hymnNumero !== correctNum);
+  let candidates = pool.filter((x) => x.hymnNumero !== correctNum);
 
   if (difficulty === 'hard') {
     // tenta títulos "parecidos" (mesmas palavras)
     const ct = String(correct.hymnTitulo || '').toLowerCase().split(/\s+/).filter(Boolean);
     const tokenSet = new Set(ct);
-    const similar = candidates.filter(x => {
+    const similar = candidates.filter((x) => {
       const tt = String(x.hymnTitulo || '').toLowerCase().split(/\s+/).filter(Boolean);
       let hit = 0;
       for (const t of tt) if (tokenSet.has(t)) hit++;
       return hit >= 1;
     });
-    if (similar.length >= 3) candidates = similar;
+    // só usa se houver ao menos 3 hinos DISTINTOS (não só estrofes)
+    if (new Set(similar.map((x) => x.hymnNumero)).size >= 3) candidates = similar;
   } else if (difficulty === 'easy') {
     // easy: remove candidatos com títulos muito parecidos para facilitar
     const ct = String(correct.hymnTitulo || '').toLowerCase();
-    candidates = candidates.filter(x => !String(x.hymnTitulo || '').toLowerCase().includes(ct.slice(0, 6)));
+    const filtered = candidates.filter((x) => !String(x.hymnTitulo || '').toLowerCase().includes(ct.slice(0, 6)));
+    if (new Set(filtered.map((x) => x.hymnNumero)).size >= 3) candidates = filtered;
   }
 
+  const nums = [...new Set(candidates.map((x) => x.hymnNumero))];
   const pickedNums = new Set();
-  while (pickedNums.size < 3 && candidates.length) {
-    const x = pickRandom(candidates);
-    pickedNums.add(x.hymnNumero);
+  while (pickedNums.size < 3 && pickedNums.size < nums.length) {
+    pickedNums.add(pickRandom(nums));
   }
   return Array.from(pickedNums);
 }

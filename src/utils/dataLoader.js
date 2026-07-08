@@ -18,6 +18,7 @@ const antigo = new Set([
   'Ezequiel', 'Daniel', 'Oséias', 'Joel', 'Amós',
   'Obadias', 'Jonas', 'Miquéias', 'Naum', 'Habacuque',
   'Sofonias', 'Ageu', 'Zacarias', 'Malaquias',
+  'Cânticos', 'Lamentações de Jeremias',
 ]);
 
 const novo = new Set([
@@ -39,7 +40,8 @@ const corrections = {
   'I Tessalonicenses': '1 Tessalonicenses', 'II Tessalonicenses': '2 Tessalonicenses',
   'I Timóteo': '1 Timóteo', 'II Timóteo': '2 Timóteo',
   'I Crônicas': '1 Crônicas', 'II Crônicas': '2 Crônicas',
-  'Cantares de Salomão': 'Cantares',
+  'Cantares de Salomão': 'Cânticos',
+  'Colossenes': 'Colossenses',
   'Lamentações de Jeremias': 'Lamentações',
   'Apocalipse - 22': 'Apocalipse',
 };

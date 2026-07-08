@@ -16,10 +16,10 @@
   </p>
 
   <p>
-    <img src="https://img.shields.io/badge/version-1.0.0-blue.svg" alt="Version 1.0.0" />
+    <img src="https://img.shields.io/badge/version-2.0.0-blue.svg" alt="Version 2.0.0" />
     <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="License MIT" />
-    <img src="https://img.shields.io/badge/Expo-49.0.0-000020.svg?logo=expo" alt="Expo" />
-    <img src="https://img.shields.io/badge/React%20Native-0.72-61DAFB.svg?logo=react" alt="React Native" />
+    <img src="https://img.shields.io/badge/Expo-54.0.0-000020.svg?logo=expo" alt="Expo" />
+    <img src="https://img.shields.io/badge/React%20Native-0.81-61DAFB.svg?logo=react" alt="React Native" />
   </p>
 </div>
 
@@ -116,29 +116,38 @@ Verbo-Hino/
 │   ├── common_hymns.json
 │   ├── icon.png
 │   ├── splash.png
-│   ├── audio/
-│   │   ├── correct.mp3
-│   │   └── wrong.mp3
-│   └── screenshots/
-│       ├── gameplay.png
-│       └── stats.png
+│   └── audio/
+│       ├── correct.mp3
+│       └── wrong.mp3
 ├── src/
+│   ├── components/
+│   │   ├── AnswerButton.js
+│   │   ├── Hearts.js
+│   │   └── VerseCard.js
 │   ├── screens/
 │   │   ├── GameScreen.js
 │   │   └── StatsScreen.js
 │   ├── utils/
+│   │   ├── asyncStorage.js
 │   │   ├── dataLoader.js
-│   │   ├── questionFactory.js
-│   │   ├── statistics.js
+│   │   ├── difficulty.js
 │   │   ├── exporters.js
-│   │   └── preferences.js
+│   │   ├── preferences.js
+│   │   ├── questionFactory.js
+│   │   ├── sound.js
+│   │   └── statistics.js
 │   ├── data/
 │   │   └── rawList.js
 │   ├── theme.js
-│   └── App.js
-├── .gitignore
+│   └── web/
+│       └── asyncStorageShim.js
+├── public/
+│   └── index.html
+├── android/
+├── App.js
 ├── app.json
 ├── package.json
+├── vercel.json
 └── README.md
 ```
 
@@ -367,29 +376,38 @@ Verbo-Hino/
 │   ├── common_hymns.json
 │   ├── icon.png
 │   ├── splash.png
-│   ├── audio/
-│   │   ├── correct.mp3
-│   │   └── wrong.mp3
-│   └── screenshots/
-│       ├── gameplay.png
-│       └── stats.png
+│   └── audio/
+│       ├── correct.mp3
+│       └── wrong.mp3
 ├── src/
+│   ├── components/
+│   │   ├── AnswerButton.js
+│   │   ├── Hearts.js
+│   │   └── VerseCard.js
 │   ├── screens/
 │   │   ├── GameScreen.js
 │   │   └── StatsScreen.js
 │   ├── utils/
+│   │   ├── asyncStorage.js
 │   │   ├── dataLoader.js
-│   │   ├── questionFactory.js
-│   │   ├── statistics.js
+│   │   ├── difficulty.js
 │   │   ├── exporters.js
-│   │   └── preferences.js
+│   │   ├── preferences.js
+│   │   ├── questionFactory.js
+│   │   ├── sound.js
+│   │   └── statistics.js
 │   ├── data/
 │   │   └── rawList.js
 │   ├── theme.js
-│   └── App.js
-├── .gitignore
+│   └── web/
+│       └── asyncStorageShim.js
+├── public/
+│   └── index.html
+├── android/
+├── App.js
 ├── app.json
 ├── package.json
+├── vercel.json
 └── README.md
 ```
 

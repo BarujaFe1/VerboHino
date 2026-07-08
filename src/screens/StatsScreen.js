@@ -81,7 +81,7 @@ export default function StatsScreen() {
     try {
       const res = await importHistoryJSON();
       if (res.canceled) return;
-      if (!res.ok) return showSnack('Arquivo inválido.');
+      if (!res.ok) return showSnack(res.reason || 'Arquivo inválido.');
       setHistory(res.history);
       showSnack('Histórico importado.');
     } catch {

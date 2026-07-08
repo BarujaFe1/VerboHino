@@ -87,9 +87,9 @@ android {
     buildToolsVersion rootProject.ext.buildToolsVersion
     compileSdk rootProject.ext.compileSdkVersion
 
-    namespace 'com.seuapp.quizbibliahinario'
+    namespace 'com.barujafe.verbohino'
     defaultConfig {
-        applicationId 'com.seuapp.quizbibliahinario'
+        applicationId 'com.barujafe.verbohino'
         minSdkVersion rootProject.ext.minSdkVersion
         targetSdkVersion rootProject.ext.targetSdkVersion
         versionCode 2

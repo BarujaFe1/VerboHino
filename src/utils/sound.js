@@ -1,10 +1,8 @@
-/**
- * src/utils/sound.js
- * Função: áudio de acerto/erro usando expo-av (SDK 54), com fallback se não existir.
- */
+import { Platform } from 'react-native';
 import { Audio } from 'expo-av';
 
 export async function tryLoadSound(requireRef) {
+  if (Platform.OS === 'web') return null;
   try {
     const { sound } = await Audio.Sound.createAsync(requireRef, { shouldPlay: false });
     return sound;

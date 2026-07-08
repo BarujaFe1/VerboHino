@@ -1,13 +1,22 @@
-/**
- * src/utils/exporters.js
- * Função: exportar/importar histórico em JSON + exportar CSV (histórico e agregados).
- */
+import { Platform } from 'react-native';
 import * as FileSystem from 'expo-file-system';
 import * as Sharing from 'expo-sharing';
 import * as DocumentPicker from 'expo-document-picker';
 
 function safeFilename(name) {
   return name.replace(/[^a-z0-9_\-\.]/gi, '_');
+}
+
+function webDownload(content, filename, mimeType) {
+  const blob = new Blob([content], { type: mimeType });
+  const url = URL.createObjectURL(blob);
+  const a = document.createElement('a');
+  a.href = url;
+  a.download = filename;
+  document.body.appendChild(a);
+  a.click();
+  document.body.removeChild(a);
+  URL.revokeObjectURL(url);
 }
 
 async function shareFile(uri, mimeType) {
@@ -18,15 +27,26 @@ async function shareFile(uri, mimeType) {
 }
 
 export async function exportHistoryJSON(history) {
+  const json = JSON.stringify(history ?? [], null, 2);
   const filename = safeFilename(`history_${new Date().toISOString()}.json`);
+
+  if (Platform.OS === 'web') {
+    webDownload(json, filename, 'application/json');
+    return { ok: true };
+  }
+
   const uri = FileSystem.cacheDirectory + filename;
-  await FileSystem.writeAsStringAsync(uri, JSON.stringify(history ?? [], null, 2), {
+  await FileSystem.writeAsStringAsync(uri, json, {
     encoding: FileSystem.EncodingType.UTF8,
   });
   return shareFile(uri, 'application/json');
 }
 
 export async function importHistoryJSON() {
+  if (Platform.OS === 'web') {
+    return { ok: false, reason: 'Importação não suportada no navegador.' };
+  }
+
   const res = await DocumentPicker.getDocumentAsync({
     type: ['application/json', 'text/json', '*/*'],
     multiple: false,
@@ -41,7 +61,6 @@ export async function importHistoryJSON() {
   const parsed = JSON.parse(txt);
   if (!Array.isArray(parsed)) return { ok: false, reason: 'invalid_format' };
 
-  // sanitiza
   const sanitized = parsed
     .filter(r => r && typeof r === 'object')
     .map(r => ({
@@ -99,8 +118,15 @@ export async function exportCSV({ history, bibleByBook, hymnByNumero }) {
     lines.push(csvRow(['hymn', num, s.titulo || '', s.correct, s.total, acc.toFixed(4), '']));
   }
 
+  const csvContent = lines.join('\n');
   const filename = safeFilename(`stats_${now}.csv`);
+
+  if (Platform.OS === 'web') {
+    webDownload(csvContent, filename, 'text/csv');
+    return { ok: true };
+  }
+
   const uri = FileSystem.cacheDirectory + filename;
-  await FileSystem.writeAsStringAsync(uri, lines.join('\n'), { encoding: FileSystem.EncodingType.UTF8 });
+  await FileSystem.writeAsStringAsync(uri, csvContent, { encoding: FileSystem.EncodingType.UTF8 });
   return shareFile(uri, 'text/csv');
 }

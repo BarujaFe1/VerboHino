@@ -15,7 +15,7 @@
       "assets/**/*"
     ],
     "android": {
-      "package": "com.seuapp.quizbibliahinario",
+      "package": "com.barujafe.verbohino",
       "versionCode": 2,
       "adaptiveIcon": {
         "foregroundImage": "./assets/adaptive-icon.png",
@@ -23,7 +23,7 @@
       }
     },
     "ios": {
-      "bundleIdentifier": "com.seuapp.quizbibliahinario",
+      "bundleIdentifier": "com.barujafe.verbohino",
       "buildNumber": "2.0.0"
     },
     "extra": {

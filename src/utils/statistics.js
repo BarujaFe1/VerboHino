@@ -2,7 +2,7 @@
  * src/utils/statistics.js
  * Função: histórico + estatísticas, equivalente ao Statistics do Python, agora com 2 tipos (bíblia / hinário).
  */
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from '../utils/asyncStorage';
 
 const KEY = '@quiz_history_v2';
 

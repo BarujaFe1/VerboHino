@@ -1,4 +1,4 @@
-package com.seuapp.quizbibliahinario
+package com.barujafe.verbohino
 
 import android.os.Build
 import android.os.Bundle

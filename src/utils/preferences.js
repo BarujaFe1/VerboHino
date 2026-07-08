@@ -2,7 +2,7 @@
  * src/utils/preferences.js
  * Função: salva/carrega preferências (tema) no AsyncStorage.
  */
-import AsyncStorage from '@react-native-async-storage/async-storage';
+import AsyncStorage from '../utils/asyncStorage';
 
 const THEME_KEY = '@quiz_theme_mode_v1'; // 'light' | 'dark'
 

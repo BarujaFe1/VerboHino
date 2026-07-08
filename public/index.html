@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta httpEquiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no" />
+  <title>Verbo & Hino</title>
+  <style>
+    html, body { height: 100%; margin: 0; padding: 0; }
+    body { overflow: hidden; display: flex; flex-direction: column; }
+    #root { display: flex; flex: 1; min-height: 0; }
+    #vh-header {
+      background: linear-gradient(135deg, #13141f 0%, #1e1f29 100%);
+      padding: 12px 20px;
+      display: flex;
+      align-items: center;
+      gap: 14px;
+      flex-wrap: wrap;
+      border-bottom: 1px solid #2a2b3a;
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+      flex-shrink: 0;
+    }
+    #vh-header .name {
+      color: #bd93f9;
+      font-weight: 800;
+      font-size: 18px;
+      letter-spacing: 0.3px;
+    }
+    #vh-header .badges { display: flex; gap: 6px; }
+    #vh-header .badge {
+      background: #2a2b3a;
+      color: #8be9fd;
+      font-size: 11px;
+      font-weight: 700;
+      padding: 3px 10px;
+      border-radius: 999px;
+      letter-spacing: 0.3px;
+    }
+    #vh-header .links { margin-left: auto; display: flex; gap: 14px; }
+    #vh-header .links a {
+      color: #f8f8f2;
+      text-decoration: none;
+      font-size: 13px;
+      font-weight: 600;
+      transition: opacity 0.2s;
+    }
+    #vh-header .links a:hover { opacity: 0.7; }
+    #vh-header .links a.github { color: #50fa7b; }
+
+  </style>
+</head>
+<body>
+  <div id="vh-header">
+    <span class="name">Verbo &amp; Hino</span>
+    <span class="badges">
+      <span class="badge">React Native</span>
+      <span class="badge">Expo</span>
+    </span>
+    <span class="links">
+      <a href="#">← Portfólio</a>
+      <a href="https://github.com/BarujaFe1/VerboHino" target="_blank" rel="noopener" class="github">GitHub ↗</a>
+    </span>
+  </div>
+  <div id="root"></div>
+</body>
+</html>
