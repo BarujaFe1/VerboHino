@@ -180,8 +180,8 @@ A forma mais simples de testar o **Verbo & Hino** é instalar o APK diretamente 
 Clone o repositório:
 
 ```bash
-git clone https://github.com/BarujaFe1/Verbo-Hino.git
-cd Verbo-Hino
+git clone https://github.com/BarujaFe1/VerboHino.git
+cd VerboHino
 ```
 
 Instale as dependências:
@@ -242,8 +242,9 @@ O arquivo final ficará disponível no painel do Expo ou por meio do link gerado
 
 ## 📥 Downloads
 
-- **APK — última versão:** [Download Verbo & Hino.apk](https://expo.dev/accounts/seu-usuario/projects/Verbo-Hino/builds/ultimo-apk)
-- **Slide de apresentação:** [Ver PDF](./assets/slide.pdf)
+- **Web (produção):** [https://verbo-hino.vercel.app](https://verbo-hino.vercel.app)
+- **APK:** gere localmente com `eas build --profile preview --platform android` (EAS projectId em `app.json`)
+- **Slide de apresentação:** [Ver PDF](./assets/slide.pdf) (se disponível)
 
 > Atualize estes links sempre que uma nova versão for publicada.
 
@@ -440,8 +441,8 @@ The easiest way to test **Verbo & Hino** is by installing the APK directly on an
 Clone the repository:
 
 ```bash
-git clone https://github.com/BarujaFe1/Verbo-Hino.git
-cd Verbo-Hino
+git clone https://github.com/BarujaFe1/VerboHino.git
+cd VerboHino
 ```
 
 Install dependencies:
@@ -500,8 +501,9 @@ The final file will be available on the Expo dashboard or through the link gener
 
 ## 📥 Downloads
 
-- **APK — latest version:** [Download Verbo & Hino.apk](https://expo.dev/accounts/seu-usuario/projects/Verbo-Hino/builds/ultimo-apk)
-- **Project presentation:** [View PDF](./assets/slide.pdf)
+- **Web (production):** [https://verbo-hino.vercel.app](https://verbo-hino.vercel.app)
+- **APK:** build with `eas build --profile preview --platform android` (EAS projectId in `app.json`)
+- **Project presentation:** [View PDF](./assets/slide.pdf) (if available)
 
 > Update these links whenever a new version is released.
 

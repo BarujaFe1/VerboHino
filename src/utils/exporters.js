@@ -42,9 +42,56 @@ export async function exportHistoryJSON(history) {
   return shareFile(uri, 'application/json');
 }
 
+function sanitizeHistory(parsed) {
+  if (!Array.isArray(parsed)) return null;
+  return parsed
+    .filter((r) => r && typeof r === 'object')
+    .map((r) => ({
+      type: r.type === 'hymn' ? 'hymn' : 'bible',
+      correct: !!r.correct,
+      mode: String(r.mode ?? 'classic'),
+      difficulty: String(r.difficulty ?? 'easy'),
+      timestamp: String(r.timestamp ?? new Date().toISOString()),
+      book: r.book ? String(r.book) : null,
+      ref: r.ref ? String(r.ref) : null,
+      hymnNumero: r.hymnNumero ?? null,
+      hymnTitulo: r.hymnTitulo ? String(r.hymnTitulo) : null,
+      stanzaNumero: r.stanzaNumero ?? null,
+    }));
+}
+
+function importHistoryJSONWeb() {
+  return new Promise((resolve) => {
+    const input = document.createElement('input');
+    input.type = 'file';
+    input.accept = 'application/json,.json';
+    input.onchange = async () => {
+      const file = input.files?.[0];
+      if (!file) {
+        resolve({ ok: false, canceled: true });
+        return;
+      }
+      try {
+        const txt = await file.text();
+        const sanitized = sanitizeHistory(JSON.parse(txt));
+        if (!sanitized) {
+          resolve({ ok: false, reason: 'invalid_format' });
+          return;
+        }
+        resolve({ ok: true, history: sanitized });
+      } catch {
+        resolve({ ok: false, reason: 'invalid_format' });
+      }
+    };
+    // Alguns navegadores disparam cancel ao fechar o seletor sem arquivo
+    input.addEventListener('cancel', () => resolve({ ok: false, canceled: true }));
+    input.click();
+  });
+}
+
 export async function importHistoryJSON() {
   if (Platform.OS === 'web') {
-    return { ok: false, reason: 'Importação não suportada no navegador.' };
+    return importHistoryJSONWeb();
   }
 
   const res = await DocumentPicker.getDocumentAsync({
@@ -58,23 +105,8 @@ export async function importHistoryJSON() {
   if (!file?.uri) return { ok: false, reason: 'no_uri' };
 
   const txt = await FileSystem.readAsStringAsync(file.uri, { encoding: FileSystem.EncodingType.UTF8 });
-  const parsed = JSON.parse(txt);
-  if (!Array.isArray(parsed)) return { ok: false, reason: 'invalid_format' };
-
-  const sanitized = parsed
-    .filter(r => r && typeof r === 'object')
-    .map(r => ({
-      type: r.type === 'hymn' ? 'hymn' : 'bible',
-      correct: !!r.correct,
-      mode: String(r.mode ?? 'classic'),
-      difficulty: String(r.difficulty ?? 'easy'),
-      timestamp: String(r.timestamp ?? new Date().toISOString()),
-      book: r.book ? String(r.book) : null,
-      ref: r.ref ? String(r.ref) : null,
-      hymnNumero: (r.hymnNumero ?? null),
-      hymnTitulo: r.hymnTitulo ? String(r.hymnTitulo) : null,
-      stanzaNumero: (r.stanzaNumero ?? null),
-    }));
+  const sanitized = sanitizeHistory(JSON.parse(txt));
+  if (!sanitized) return { ok: false, reason: 'invalid_format' };
 
   return { ok: true, history: sanitized };
 }
