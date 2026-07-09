@@ -81,9 +81,17 @@ export default function StatsScreen() {
     try {
       const res = await importHistoryJSON();
       if (res.canceled) return;
-      if (!res.ok) return showSnack(res.reason || 'Arquivo inválido.');
+      if (!res.ok) {
+        const reasonMap = {
+          invalid_format: 'Arquivo JSON inválido.',
+          no_uri: 'Não foi possível ler o arquivo.',
+          sharing_unavailable: 'Compartilhamento indisponível.',
+        };
+        return showSnack(reasonMap[res.reason] || res.reason || 'Arquivo inválido.');
+      }
+      const count = Array.isArray(res.history) ? res.history.length : 0;
       setHistory(res.history);
-      showSnack('Histórico importado.');
+      showSnack(`Histórico substituído (${count} registros).`);
     } catch {
       showSnack('Falha ao importar JSON.');
     }

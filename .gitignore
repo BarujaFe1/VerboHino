@@ -10,3 +10,5 @@ android/app/build/
 .vercel
 dist/
 test/*.bundle.mjs
+
+.expo/

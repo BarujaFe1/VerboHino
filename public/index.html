@@ -11,7 +11,13 @@
   <meta property="og:description" content="Quiz gamificado de Bíblia (ARC) e Hinário da CCB — web e mobile com Expo." />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://verbo-hino.vercel.app/" />
+  <meta property="og:image" content="https://verbo-hino.vercel.app/og-image.png" />
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content="Verbo & Hino" />
+  <meta name="twitter:description" content="Quiz gamificado de Bíblia (ARC) e Hinário da CCB." />
+  <meta name="twitter:image" content="https://verbo-hino.vercel.app/og-image.png" />
   <link rel="canonical" href="https://verbo-hino.vercel.app/" />
+  <link rel="icon" type="image/png" href="/favicon.png" />
   <style>
     html, body { height: 100%; margin: 0; padding: 0; }
     body { overflow: hidden; display: flex; flex-direction: column; }
@@ -53,7 +59,13 @@
     }
     #vh-header .links a:hover { opacity: 0.7; }
     #vh-header .links a.github { color: #50fa7b; }
-
+    @media (max-width: 520px) {
+      #vh-header { padding: 8px 12px; gap: 8px; }
+      #vh-header .name { font-size: 15px; }
+      #vh-header .badges { display: none; }
+      #vh-header .links { gap: 10px; }
+      #vh-header .links a { font-size: 12px; }
+    }
   </style>
 </head>
 <body>

@@ -65,7 +65,7 @@ Os níveis são balanceados com base na popularidade e recorrência dos versícu
 - Pontuação por acerto.
 - Sistema de **streak** para sequência de respostas corretas.
 - **Multiplicador x2** após boa sequência de acertos.
-- Ajudas estratégicas:
+- Ajudas estratégicas (disponíveis a cada nova pergunta):
   - **50/50:** remove duas alternativas incorretas.
   - **Dica:** mostra o testamento, no quiz bíblico, ou a faixa de numeração, no quiz do hinário.
 
@@ -76,7 +76,7 @@ Os níveis são balanceados com base na popularidade e recorrência dos versícu
 - Tabela dos **Top 15** resultados.
 - Separação entre estatísticas da Bíblia e do Hinário.
 - Exportação do histórico em **JSON** e **CSV**.
-- Importação de histórico para restaurar ou mesclar dados.
+- Importação de histórico em JSON (substitui o histórico local pelo arquivo importado).
 
 ### 🎨 Experiência do usuário
 
@@ -108,7 +108,7 @@ Os níveis são balanceados com base na popularidade e recorrência dos versícu
 ## 📁 Estrutura de pastas
 
 ```txt
-Verbo-Hino/
+VerboHino/
 ├── assets/
 │   ├── arc.json
 │   ├── hinario_pronto.json
@@ -116,6 +116,8 @@ Verbo-Hino/
 │   ├── common_hymns.json
 │   ├── icon.png
 │   ├── splash.png
+│   ├── adaptive-icon.png
+│   ├── slide.pdf
 │   └── audio/
 │       ├── correct.mp3
 │       └── wrong.mp3
@@ -142,7 +144,9 @@ Verbo-Hino/
 │   └── web/
 │       └── asyncStorageShim.js
 ├── public/
-│   └── index.html
+│   ├── index.html
+│   ├── favicon.png
+│   └── og-image.png
 ├── android/
 ├── App.js
 ├── app.json
@@ -326,7 +330,7 @@ Difficulty levels are balanced according to the popularity and recurrence of Bib
 - Score system based on correct answers.
 - **Streak** system for consecutive correct answers.
 - **x2 multiplier** after a strong sequence of correct answers.
-- Strategic assists:
+- Strategic assists (available on every new question):
   - **50/50:** removes two incorrect alternatives.
   - **Hint:** shows the testament in Bible mode or the hymn number range in Hymnal mode.
 
@@ -337,7 +341,7 @@ Difficulty levels are balanced according to the popularity and recurrence of Bib
 - **Top 15** results table.
 - Separate Bible and Hymnal statistics.
 - Export history as **JSON** and **CSV**.
-- Import history to restore or merge previous data.
+- Import history from JSON (replaces the local history with the imported file).
 
 ### 🎨 User experience
 
@@ -369,7 +373,7 @@ Difficulty levels are balanced according to the popularity and recurrence of Bib
 ## 📁 Folder structure
 
 ```txt
-Verbo-Hino/
+VerboHino/
 ├── assets/
 │   ├── arc.json
 │   ├── hinario_pronto.json
@@ -377,6 +381,8 @@ Verbo-Hino/
 │   ├── common_hymns.json
 │   ├── icon.png
 │   ├── splash.png
+│   ├── adaptive-icon.png
+│   ├── slide.pdf
 │   └── audio/
 │       ├── correct.mp3
 │       └── wrong.mp3
@@ -403,7 +409,9 @@ Verbo-Hino/
 │   └── web/
 │       └── asyncStorageShim.js
 ├── public/
-│   └── index.html
+│   ├── index.html
+│   ├── favicon.png
+│   └── og-image.png
 ├── android/
 ├── App.js
 ├── app.json
@@ -547,9 +555,10 @@ Developed by **BarujaFe**
 
 ## 🖼️ Preview
 
+Live web app: [https://verbo-hino.vercel.app](https://verbo-hino.vercel.app)
+
 <p align="center">
-  <img src="./assets/screenshots/gameplay.png" alt="Gameplay preview" width="220" />
-  <img src="./assets/screenshots/stats.png" alt="Stats screen" width="220" />
+  <img src="./assets/icon.png" alt="Verbo and Hino icon" width="160" />
 </p>
 
 ---

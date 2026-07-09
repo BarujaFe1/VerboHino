@@ -26,6 +26,14 @@
       "bundleIdentifier": "com.barujafe.verbohino",
       "buildNumber": "2.0.0"
     },
+    "web": {
+      "favicon": "./assets/adaptive-icon.png",
+      "name": "Verbo & Hino",
+      "shortName": "VerboHino",
+      "description": "Quiz gamificado de Bíblia (ARC) e Hinário da CCB",
+      "themeColor": "#13141f",
+      "backgroundColor": "#13141f"
+    },
     "extra": {
       "eas": {
         "projectId": "ae438b4d-3989-4b6e-ac12-17fe88ad2f33"

@@ -222,6 +222,7 @@ export default function GameScreen({ navigation }) {
     setLocked(false);
     setEliminated(new Set());
     setHintShown(false);
+    setHelpsUsed({ fifty: false, hint: false });
 
     rememberRecent(qq.id);
 
@@ -271,17 +272,18 @@ export default function GameScreen({ navigation }) {
     setStreak(0);
     setMultiplier(1);
 
-    if (mode === 'survival') setLives((l) => l - 1);
+    let nextLives = lives;
+    if (mode === 'survival') {
+      nextLives = Math.max(0, lives - 1);
+      setLives(nextLives);
+    }
 
     await persistRecord({ correct: false });
 
     await playSound(wrongSoundRef.current);
     try { await Haptics.notificationAsync(Haptics.NotificationFeedbackType.Error); } catch {}
-  }
 
-  function canContinue(nextLives) {
-    if (mode !== 'survival') return true;
-    return (nextLives ?? lives) > 0;
+    return nextLives;
   }
 
   async function onAnswerPress(label) {
@@ -293,18 +295,15 @@ export default function GameScreen({ navigation }) {
     timerRef.current = null;
 
     const ok = label === q.correctLabel;
+    let nextLives = lives;
 
     if (ok) await handleCorrect();
-    else await handleWrong();
+    else nextLives = await handleWrong();
 
     setTimeout(() => {
       if (mode === 'survival') {
-        setLives((l) => {
-          const nextLives = l;
-          if (!canContinue(nextLives)) setGameOverVisible(true);
-          else nextQuestion(false);
-          return nextLives;
-        });
+        if (nextLives <= 0) setGameOverVisible(true);
+        else nextQuestion(false);
       } else {
         nextQuestion(false);
       }
@@ -317,17 +316,13 @@ export default function GameScreen({ navigation }) {
     setLocked(true);
     setSelected('__timeout__');
 
-    await handleWrong();
+    const nextLives = await handleWrong();
     showSnack('⏱️ Tempo esgotado!');
 
     setTimeout(() => {
       if (mode === 'survival') {
-        setLives((l) => {
-          const nextLives = l;
-          if (!canContinue(nextLives)) setGameOverVisible(true);
-          else nextQuestion(false);
-          return nextLives;
-        });
+        if (nextLives <= 0) setGameOverVisible(true);
+        else nextQuestion(false);
       } else {
         nextQuestion(false);
       }
