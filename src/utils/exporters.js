@@ -1,5 +1,10 @@
+/**
+ * Exportação / importação de histórico (JSON e CSV).
+ * Mobile usa expo-file-system/legacy (API estável no SDK 54+).
+ * Web usa download/upload via Blob e <input type="file">.
+ */
 import { Platform } from 'react-native';
-import * as FileSystem from 'expo-file-system';
+import * as FileSystem from 'expo-file-system/legacy';
 import * as Sharing from 'expo-sharing';
 import * as DocumentPicker from 'expo-document-picker';
 
@@ -42,7 +47,7 @@ export async function exportHistoryJSON(history) {
   return shareFile(uri, 'application/json');
 }
 
-function sanitizeHistory(parsed) {
+export function sanitizeHistory(parsed) {
   if (!Array.isArray(parsed)) return null;
   return parsed
     .filter((r) => r && typeof r === 'object')
@@ -83,7 +88,6 @@ function importHistoryJSONWeb() {
         resolve({ ok: false, reason: 'invalid_format' });
       }
     };
-    // Alguns navegadores disparam cancel ao fechar o seletor sem arquivo
     input.addEventListener('cancel', () => resolve({ ok: false, canceled: true }));
     input.click();
   });
@@ -94,25 +98,31 @@ export async function importHistoryJSON() {
     return importHistoryJSONWeb();
   }
 
-  const res = await DocumentPicker.getDocumentAsync({
-    type: ['application/json', 'text/json', '*/*'],
-    multiple: false,
-    copyToCacheDirectory: true,
-  });
-  if (res.canceled) return { ok: false, canceled: true };
+  try {
+    const res = await DocumentPicker.getDocumentAsync({
+      type: ['application/json', 'text/json', '*/*'],
+      multiple: false,
+      copyToCacheDirectory: true,
+    });
+    if (res.canceled) return { ok: false, canceled: true };
 
-  const file = res.assets?.[0];
-  if (!file?.uri) return { ok: false, reason: 'no_uri' };
+    const file = res.assets?.[0];
+    if (!file?.uri) return { ok: false, reason: 'no_uri' };
 
-  const txt = await FileSystem.readAsStringAsync(file.uri, { encoding: FileSystem.EncodingType.UTF8 });
-  const sanitized = sanitizeHistory(JSON.parse(txt));
-  if (!sanitized) return { ok: false, reason: 'invalid_format' };
+    const txt = await FileSystem.readAsStringAsync(file.uri, {
+      encoding: FileSystem.EncodingType.UTF8,
+    });
+    const sanitized = sanitizeHistory(JSON.parse(txt));
+    if (!sanitized) return { ok: false, reason: 'invalid_format' };
 
-  return { ok: true, history: sanitized };
+    return { ok: true, history: sanitized };
+  } catch {
+    return { ok: false, reason: 'invalid_format' };
+  }
 }
 
 function csvRow(cols) {
-  return cols.map(c => `"${String(c ?? '').replace(/"/g, '""')}"`).join(',');
+  return cols.map((c) => `"${String(c ?? '').replace(/"/g, '""')}"`).join(',');
 }
 
 export async function exportCSV({ history, bibleByBook, hymnByNumero }) {
@@ -124,29 +134,23 @@ export async function exportCSV({ history, bibleByBook, hymnByNumero }) {
   lines.push(csvRow(['section', 'history', '', '', '', '', '']));
   lines.push(csvRow(['history', 'type', 'correct', 'mode', 'difficulty', 'id', 'timestamp']));
   for (const r of history ?? []) {
-    const id = r.type === 'hymn' ? `hino_${r.hymnNumero}` : (r.ref || '');
-    lines.push(csvRow([
-      'history',
-      r.type,
-      r.correct ? '1' : '0',
-      r.mode,
-      r.difficulty,
-      id,
-      r.timestamp
-    ]));
+    const id = r.type === 'hymn' ? `hino_${r.hymnNumero}` : r.ref || '';
+    lines.push(
+      csvRow(['history', r.type, r.correct ? '1' : '0', r.mode, r.difficulty, id, r.timestamp])
+    );
   }
 
   lines.push(csvRow(['section', 'bible_by_book', '', '', '', '', '']));
   lines.push(csvRow(['book', 'name', 'correct', 'total', 'accuracy', '', '']));
   for (const [book, s] of Object.entries(bibleByBook ?? {})) {
-    const acc = s.total ? (s.correct / s.total) : 0;
+    const acc = s.total ? s.correct / s.total : 0;
     lines.push(csvRow(['book', book, s.correct, s.total, acc.toFixed(4), '', '']));
   }
 
   lines.push(csvRow(['section', 'hymn_by_numero', '', '', '', '', '']));
   lines.push(csvRow(['hymn', 'numero', 'titulo', 'correct', 'total', 'accuracy', '']));
   for (const [num, s] of Object.entries(hymnByNumero ?? {})) {
-    const acc = s.total ? (s.correct / s.total) : 0;
+    const acc = s.total ? s.correct / s.total : 0;
     lines.push(csvRow(['hymn', num, s.titulo || '', s.correct, s.total, acc.toFixed(4), '']));
   }
 
@@ -159,6 +163,8 @@ export async function exportCSV({ history, bibleByBook, hymnByNumero }) {
   }
 
   const uri = FileSystem.cacheDirectory + filename;
-  await FileSystem.writeAsStringAsync(uri, csvContent, { encoding: FileSystem.EncodingType.UTF8 });
+  await FileSystem.writeAsStringAsync(uri, csvContent, {
+    encoding: FileSystem.EncodingType.UTF8,
+  });
   return shareFile(uri, 'text/csv');
 }

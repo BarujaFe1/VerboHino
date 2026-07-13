@@ -1,14 +1,42 @@
-﻿android/local.properties
+﻿# Dependencies
+node_modules/
+
+# Expo / Metro
+.expo/
+dist/
+web-build/
+
+# Native build artifacts
+android/.cxx/
+android/build/
+android/app/build/
+android/local.properties
+ios/build/
 *.keystore
 *.jks
 *.apk
 *.aab
-node_modules/
-android/.cxx/
-android/build/
-android/app/build/
-.vercel
-dist/
+
+# Env / secrets
+.env
+.env.*
+!.env.example
+*.pem
+
+# Test bundles (generated)
 test/*.bundle.mjs
 
-.expo/
+# Tooling / OS
+.vercel
+.DS_Store
+Thumbs.db
+*.log
+npm-debug.log*
+yarn-error.log*
+.idea/
+.vscode/
+*.swp
+
+# Coverage / caches
+coverage/
+.cache/

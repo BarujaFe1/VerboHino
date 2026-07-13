@@ -25,7 +25,7 @@ import VerseCard from '../components/VerseCard';
 import AnswerButton from '../components/AnswerButton';
 import Hearts from '../components/Hearts';
 
-import { HistoryContext, ThemeModeContext } from '../../App';
+import { HistoryContext, ThemeModeContext } from '../context/AppContext';
 import { addRecord } from '../utils/statistics';
 import { buildAllPoolsAsync } from '../utils/dataLoader';
 import { createQuestion } from '../utils/questionFactory';
@@ -154,30 +154,27 @@ export default function GameScreen({ navigation }) {
     // eslint-disable-next-line react-hooks/exhaustive-deps
   }, [gameType, mode, difficulty, dataReady]);
 
-  // timeattack timer
+  // timeattack timer — side effects fora do updater de setState
   useEffect(() => {
     if (mode !== 'timeattack') {
       clearInterval(timerRef.current);
       timerRef.current = null;
       return;
     }
-    if (!q) return;
-    if (locked) return;
+    if (!q || locked) return;
 
     setTimeLeft(15);
     clearInterval(timerRef.current);
 
+    let remaining = 15;
     timerRef.current = setInterval(() => {
-      setTimeLeft((t) => {
-        const next = t - 0.1;
-        if (next <= 0) {
-          clearInterval(timerRef.current);
-          timerRef.current = null;
-          onTimeout();
-          return 0;
-        }
-        return next;
-      });
+      remaining = Math.max(0, +(remaining - 0.1).toFixed(1));
+      setTimeLeft(remaining);
+      if (remaining <= 0) {
+        clearInterval(timerRef.current);
+        timerRef.current = null;
+        onTimeout();
+      }
     }, 100);
 
     return () => {
@@ -500,6 +497,7 @@ export default function GameScreen({ navigation }) {
             buttonColor={palette.purple}
             textColor={palette.mode === 'light' ? '#FFF' : palette.bg}
             style={styles.helpBtn}
+            accessibilityLabel="Usar ajuda cinquenta por cento"
           >
             50/50
           </Button>
@@ -510,6 +508,7 @@ export default function GameScreen({ navigation }) {
             buttonColor={palette.cyan}
             textColor={palette.mode === 'light' ? '#FFF' : palette.bg}
             style={styles.helpBtn}
+            accessibilityLabel="Usar dica"
           >
             Dica
           </Button>
@@ -582,7 +581,7 @@ function makeStyles(p) {
     streak: { marginTop: 8, color: p.orange, textAlign: 'center', fontSize: 14, fontWeight: '800' },
     segmentWrap: { marginTop: 10 },
     helpRow: { flexDirection: 'row', gap: 10, marginTop: 14 },
-    helpBtn: { flex: 1, borderRadius: 16 },
+    helpBtn: { flex: 1, borderRadius: 16, minHeight: 44 },
     timerWrap: { marginTop: 12, alignItems: 'center', gap: 6 },
     progress: { width: '100%', height: 10, borderRadius: 999, backgroundColor: p.sidebar },
     timerText: { color: p.fg, fontSize: 12, fontWeight: '800' },

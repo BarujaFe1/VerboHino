@@ -1,0 +1,34 @@
+name: CI
+
+on:
+  push:
+    branches: [main, master, 'chore/**', 'fix/**', 'fix/**']
+  pull_request:
+
+jobs:
+  quality:
+    name: Lint · Test · Web export
+    runs-on: ubuntu-latest
+    timeout-minutes: 25
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+          cache: npm
+
+      - name: Install
+        run: npm ci
+
+      - name: Lint (structural)
+        run: npm run lint
+
+      - name: Unit / domain tests
+        run: npm test
+
+      - name: Export web build
+        run: npm run export:web

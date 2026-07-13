@@ -25,7 +25,21 @@ function numberRangeHint(n) {
   if (n == null) return 'Desconhecido';
   if (n <= 160) return '1–160';
   if (n <= 320) return '161–320';
-  return '321–480';
+  return '321–485';
+}
+
+/** Garante exatamente 4 opções distintas, preenchendo com fallback se necessário. */
+function ensureFourOptions(correctLabel, distractors, fallbackLabels) {
+  const opts = new Set([correctLabel, ...distractors.filter(Boolean)]);
+  for (const label of fallbackLabels) {
+    if (opts.size >= 4) break;
+    if (label && label !== correctLabel) opts.add(label);
+  }
+  const list = Array.from(opts);
+  while (list.length < 4) {
+    list.push(`Opção ${list.length + 1}`);
+  }
+  return shuffle(list).slice(0, 4);
 }
 
 function pickFromTier(pool, tier, recentIds, idFn) {
@@ -101,6 +115,9 @@ function buildHymnDistractors({ pool, correct, difficulty }) {
 
 export function createQuestion({ gameType, biblePool, hymnPool, difficulty, recentIds }) {
   if (gameType === 'hymn') {
+    if (!hymnPool?.length) {
+      throw new Error('hymnPool vazio: não é possível criar pergunta.');
+    }
     const idFn = (x) => `hymn_${x.hymnNumero}_${x.stanzaNumero}`;
     const correct = pickFromTier(hymnPool, difficulty, recentIds, idFn);
 
@@ -117,11 +134,17 @@ export function createQuestion({ gameType, biblePool, hymnPool, difficulty, rece
     }
 
     const distractorNums = buildHymnDistractors({ pool: hymnPool, correct: correctPicked, difficulty });
-
-    const options = shuffle([
-      formatHymnOption(correctPicked),
-      ...distractorNums.map((n) => formatHymnOption({ hymnNumero: n, hymnTitulo: (hymnPool.find(x => x.hymnNumero === n)?.hymnTitulo) || '' })),
-    ]);
+    const correctLabel = formatHymnOption(correctPicked);
+    const distractorLabels = distractorNums.map((n) =>
+      formatHymnOption({
+        hymnNumero: n,
+        hymnTitulo: hymnPool.find((x) => x.hymnNumero === n)?.hymnTitulo || '',
+      })
+    );
+    const fallbackLabels = hymnPool
+      .filter((x) => x.hymnNumero !== correctPicked.hymnNumero)
+      .map((x) => formatHymnOption(x));
+    const options = ensureFourOptions(correctLabel, distractorLabels, fallbackLabels);
 
     const hint = `Faixa do número: ${numberRangeHint(correctPicked.hymnNumero)}`;
 
@@ -129,7 +152,7 @@ export function createQuestion({ gameType, biblePool, hymnPool, difficulty, rece
       type: 'hymn',
       id: `hymn_${correctPicked.hymnNumero}_${correctPicked.stanzaNumero}`,
       promptText: correctPicked.text,
-      correctLabel: formatHymnOption(correctPicked),
+      correctLabel,
       options,
       hint,
       meta: {
@@ -141,11 +164,15 @@ export function createQuestion({ gameType, biblePool, hymnPool, difficulty, rece
   }
 
   // bible
+  if (!biblePool?.length) {
+    throw new Error('biblePool vazio: não é possível criar pergunta.');
+  }
   const idFn = (x) => x.ref;
   const correct = pickFromTier(biblePool, difficulty, recentIds, idFn);
 
   const distractorRefs = buildBibleDistractors({ pool: biblePool, correct, difficulty });
-  const options = shuffle([correct.ref, ...distractorRefs]);
+  const fallbackRefs = biblePool.filter((x) => x.ref !== correct.ref).map((x) => x.ref);
+  const options = ensureFourOptions(correct.ref, distractorRefs, fallbackRefs);
 
   const hint = `Testamento: ${correct.testament}`;
 
