@@ -1,17 +1,31 @@
 /**
- * src/components/AnswerButton.js
- * Função: botão de opção (Apple-ish: limpo, bordas suaves, feedback claro).
+ * Botão de opção (Apple-ish: limpo, bordas suaves, feedback claro).
  */
 import React from 'react';
 import { StyleSheet } from 'react-native';
 import { Button } from 'react-native-paper';
 
-export default function AnswerButton({ palette, label, onPress, disabled, eliminated, isCorrect, isWrongSelected }) {
+export default function AnswerButton({
+  palette,
+  label,
+  onPress,
+  disabled,
+  eliminated,
+  isCorrect,
+  isWrongSelected,
+}) {
   const styles = makeStyles(palette);
 
   if (eliminated) {
     return (
-      <Button mode="outlined" disabled style={[styles.btn, styles.eliminated]} textColor={palette.comment}>
+      <Button
+        mode="outlined"
+        disabled
+        style={[styles.btn, styles.eliminated]}
+        textColor={palette.comment}
+        accessibilityLabel="Opção eliminada"
+        accessibilityState={{ disabled: true }}
+      >
         —
       </Button>
     );
@@ -23,7 +37,12 @@ export default function AnswerButton({ palette, label, onPress, disabled, elimin
       ? palette.red
       : palette.sidebar;
 
-  const textColor = (isCorrect || isWrongSelected) ? (palette.mode === 'light' ? '#FFFFFF' : palette.bg) : palette.fg;
+  const textColor =
+    isCorrect || isWrongSelected
+      ? palette.mode === 'light'
+        ? '#FFFFFF'
+        : palette.bg
+      : palette.fg;
 
   return (
     <Button
@@ -35,6 +54,9 @@ export default function AnswerButton({ palette, label, onPress, disabled, elimin
       labelStyle={styles.label}
       buttonColor={buttonColor}
       textColor={textColor}
+      accessibilityLabel={`Alternativa: ${label}`}
+      accessibilityRole="button"
+      accessibilityState={{ disabled: !!disabled }}
     >
       {label}
     </Button>
@@ -46,6 +68,7 @@ function makeStyles(p) {
     btn: {
       borderRadius: 16,
       marginBottom: 10,
+      minHeight: 48,
     },
     content: { paddingVertical: 10 },
     label: { fontSize: 14, letterSpacing: 0.2, fontWeight: '700' },

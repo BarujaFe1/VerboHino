@@ -7,6 +7,7 @@ const alias = [
   `--alias:react-native=./test/stubs/react-native.js`,
   `--alias:@react-native-async-storage/async-storage=./test/stubs/react-native.js`,
   `--alias:expo-file-system=./test/stubs/expo-file-system.js`,
+  `--alias:expo-file-system/legacy=./test/stubs/expo-file-system.js`,
   `--alias:expo-sharing=./test/stubs/expo-sharing.js`,
   `--alias:expo-document-picker=./test/stubs/expo-document-picker.js`,
 ].join(' ');

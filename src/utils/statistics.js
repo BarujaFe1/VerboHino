@@ -25,6 +25,9 @@ export async function saveHistory(history) {
   }
 }
 
+/** Limite local para evitar crescimento infinito do AsyncStorage. */
+export const HISTORY_MAX_RECORDS = 5000;
+
 export function addRecord(history, record) {
   const safe = {
     type: record.type, // 'bible' | 'hymn'
@@ -42,7 +45,8 @@ export function addRecord(history, record) {
     hymnTitulo: record.hymnTitulo ?? null,
     stanzaNumero: record.stanzaNumero ?? null,
   };
-  return [...(history ?? []), safe];
+  const next = [...(history ?? []), safe];
+  return next.length > HISTORY_MAX_RECORDS ? next.slice(-HISTORY_MAX_RECORDS) : next;
 }
 
 export function overallAccuracy(history) {

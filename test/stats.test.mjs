@@ -1,10 +1,36 @@
-import { overallAccuracy, accuracyByType, statsBibleByBook, statsHymnByNumero, addRecord } from '../src/utils/statistics.js';
-import { exportHistoryJSON, exportCSV } from '../src/utils/exporters.js';
+import {
+  overallAccuracy,
+  accuracyByType,
+  statsBibleByBook,
+  statsHymnByNumero,
+  addRecord,
+  HISTORY_MAX_RECORDS,
+} from '../src/utils/statistics.js';
+import { exportHistoryJSON, exportCSV, sanitizeHistory } from '../src/utils/exporters.js';
 import fsStub from 'expo-file-system';
 
 let failures = 0;
 function fail(m) { failures++; console.log('FAIL:', m); }
 function eq(label, a, b) { if (a !== b) fail(`${label}: esperado ${b}, obtido ${a}`); else console.log('ok', label, '=', a); }
+
+// sanitizeHistory
+const sanitized = sanitizeHistory([
+  { type: 'hymn', correct: 1, hymnNumero: 7, hymnTitulo: 'Teste' },
+  null,
+  'lixo',
+]);
+eq('sanitizeHistory.length', sanitized.length, 1);
+eq('sanitizeHistory.type', sanitized[0].type, 'hymn');
+eq('sanitizeHistory.rejectsNonArray', sanitizeHistory({ not: 'array' }), null);
+
+// history cap
+const capped = addRecord(Array.from({ length: HISTORY_MAX_RECORDS }, (_, i) => ({
+  type: 'bible',
+  correct: false,
+  timestamp: `t${i}`,
+})), { type: 'bible', correct: true, book: 'João', ref: 'João 3:16' });
+eq('historyCap.length', capped.length, HISTORY_MAX_RECORDS);
+eq('historyCap.keepsNewest', capped[capped.length - 1].correct, true);
 
 const history = [
   { type: 'bible', correct: true, mode: 'classic', difficulty: 'easy', book: 'João', ref: 'João 3:16', timestamp: 't1' },
