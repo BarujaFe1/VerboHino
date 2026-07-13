@@ -8,11 +8,16 @@ import { View, Text, StyleSheet } from 'react-native';
 export default function VerseCard({ palette, title, subtitle, text, hint }) {
   const styles = makeStyles(palette);
   return (
-    <View style={styles.card}>
+    <View
+      style={styles.card}
+      accessible
+      accessibilityRole="summary"
+      accessibilityLabel={[title, subtitle, text, hint].filter(Boolean).join('. ')}
+    >
       {!!title && <Text style={styles.title}>{title}</Text>}
       {!!subtitle && <Text style={styles.subtitle}>{subtitle}</Text>}
       <Text style={styles.text} selectable>{text}</Text>
-      {!!hint && <Text style={styles.hint}>{hint}</Text>}
+      {!!hint && <Text style={styles.hint} accessibilityLiveRegion="polite">{hint}</Text>}
     </View>
   );
 }

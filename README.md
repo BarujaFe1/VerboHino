@@ -25,13 +25,15 @@
 
 ## Preview / Screenshot
 
-> Placeholder de captura — substitua por screenshot real do app (mobile ou web).
+Live demo (recomendado): **[verbo-hino.vercel.app](https://verbo-hino.vercel.app)**
 
 <p align="center">
-  <img src="./assets/icon.png" alt="Screenshot placeholder — Verbo & Hino" width="200" />
+  <img src="./assets/verbo_hino_wordmark.png" alt="Verbo & Hino wordmark" width="280" />
+  <br />
+  <img src="./assets/icon.png" alt="Ícone Verbo & Hino" width="120" />
 </p>
 
-Live: **[verbo-hino.vercel.app](https://verbo-hino.vercel.app)**
+> Abra a demo web para ver gameplay, modos, tema e estatísticas. Screenshots de loja (Play Store) ficam no roadmap.
 
 ---
 
@@ -185,6 +187,7 @@ Live demo: https://verbo-hino.vercel.app
 | [`docs/TECHNICAL_DECISIONS.md`](./docs/TECHNICAL_DECISIONS.md) | ADRs / trade-offs |
 | [`docs/TESTING.md`](./docs/TESTING.md) | Estratégia de testes |
 | [`docs/DEPLOYMENT.md`](./docs/DEPLOYMENT.md) | Vercel + EAS |
+| [`docs/SECURITY_NOTES.md`](./docs/SECURITY_NOTES.md) | Segurança e privacidade |
 | [`docs/HANDOFF.md`](./docs/HANDOFF.md) | Handoff da revisão |
 
 ## Autor

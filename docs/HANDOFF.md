@@ -1,4 +1,4 @@
-# Handoff — Portfolio Quality Pass
+# Handoff — Portfolio Quality Pass (2ª revisão)
 
 **Projeto:** Verbo & Hino (`BarujaFe1/VerboHino`)  
 **Branch:** `chore/portfolio-quality-pass`  
@@ -6,96 +6,87 @@
 
 ---
 
-## O que foi encontrado
+## O que foi encontrado (baseline + 2ª passagem)
 
-- App Expo 54 sólido (quiz, modos, stats, web na Vercel).
-- Testes de domínio já existentes e verdes (~24k perguntas).
-- **Bug crítico:** export/import no mobile quebrado — `expo-file-system` v19 lança erro se os métodos legacy forem importados do entrypoint principal.
-- Lacunas de portfólio: sem `docs/` estruturados, sem CI, README pouco orientado a recrutador, empty states fracos, import sem confirmação, histórico sem teto.
-- Nenhum segredo/credencial exposto no código-fonte.
+### Já resolvido no 1º passe (`39a8e12`)
+- Bug crítico de export/import mobile (`expo-file-system` SDK 54 → `/legacy`)
+- Cap de histórico, confirmações de import/limpar, empty states, a11y básica
+- Timer do Relógio sem side-effect em `setState`
+- README de portfólio, docs/, CI GitHub Actions, `.env.example`, lint estrutural
+- CI **verde** no GitHub (`chore/portfolio-quality-pass`)
 
-## O que foi corrigido
+### Gaps encontrados nesta 2ª passagem
+- Telas importavam contextos de `App.js` (**dependência circular**)
+- Sem notas formais de segurança/privacidade/conteúdo
+- Factory sem guard explícito para pools vazios
+- Lint não garantia ausência de import circular
+- Fuzz não detectava vazamento de fallback `"Opção N"`
+- Preview do README ainda genérico
 
-1. `src/utils/exporters.js` → `expo-file-system/legacy` + try/catch no import nativo.
-2. Timer do modo Relógio sem side-effect dentro de `setState`.
-3. `createQuestion` sempre retorna 4 opções distintas (padding seguro).
-4. Faixa de dica do hinário: `321–485`.
-5. Cap de histórico em 5000 registros.
-6. Confirmação ao importar / limpar histórico.
-7. Empty states na tela de estatísticas.
-8. `SafeAreaProvider` no `App.js`.
-9. Labels de acessibilidade e `minHeight` de toque em botões.
+## O que foi corrigido / melhorado agora
 
-## O que foi melhorado
-
-- README reescrito como peça de portfólio.
-- Docs: Audit, Architecture, Technical Decisions, Testing, Deployment, Handoff.
-- CI GitHub Actions (`lint` + `test` + `export:web`).
-- Scripts `lint` e `ci` no `package.json`.
-- `.gitignore` e `.env.example` reforçados.
-- Testes ampliados (`sanitizeHistory`, cap de histórico).
-- Alias de teste para `expo-file-system/legacy`.
+1. **`src/context/AppContext.js`** — contextos + bootstrap; `App.js` só monta providers/nav.
+2. **GameScreen / StatsScreen** importam de `../context/AppContext` (sem circular).
+3. **`createQuestion`** lança erro claro se `biblePool`/`hymnPool` estiver vazio.
+4. **`VerseCard`** — `accessibilityLabel` + `accessibilityLiveRegion` na dica.
+5. **`docs/SECURITY_NOTES.md`** — privacidade, ausência de segredos, direitos de conteúdo.
+6. **Lint** exige `AppContext`, `SECURITY_NOTES` e bloqueia import de `App.js` nas telas.
+7. **Testes** — rejeição de pool vazio + invariante contra fallback sintético.
+8. **README / Architecture** atualizados (context layer + preview com wordmark).
 
 ## Comandos rodados
 
 ```bash
+npm run lint
 npm test
-npm run export:web
-# (após mudanças) npm run lint && npm test
+npm run export:web   # quando aplicável
 ```
 
-Node: v22.14.0 · npm: 10.9.2
+## Testes
 
-## Testes executados
-
-- `test/logic.test.mjs` — pools + fuzz 24k
-- `test/stats.test.mjs` — stats, export, sanitize, cap
-- `scripts/lint.mjs` — estrutura + import legacy
-- Export web → `dist/` OK
+- `test/logic.test.mjs` — pools + empty-pool + fuzz 24k + anti-fallback
+- `test/stats.test.mjs` — sanitize, cap, CSV/JSON
+- `scripts/lint.mjs` — estrutura + legacy FS + anti-circular
 
 ## O que ainda falta
 
-- Screenshots reais (mobile/web) no README.
-- Redeploy Vercel após merge/push.
-- Audit TalkBack/VoiceOver completo.
-- Build iOS EAS (conta Apple).
-- TypeScript opcional nos utils.
-- E2E (Detox/Maestro) — fora do escopo deste passe.
+- Screenshots de gameplay nativos (loja) — demo web cobre o gap de portfólio
+- Redeploy Vercel após merge em `main` (site já em produção com código anterior)
+- Audit TalkBack/VoiceOver completo
+- Build EAS Android/iOS sob demanda
+- TypeScript gradual nos utils
 
 ## Riscos restantes
 
-- Dataset do hinário / ARC: verificar direitos ao distribuir em lojas.
-- Bundle web ~6.4 MB (ARC embutido) — aceitável, mas pesado em 3G.
-- Sem sync entre dispositivos (mitigado por export).
+- Direitos do dataset ARC/hinário ao publicar em lojas
+- Bundle web ~6.4 MB (ARC embutido)
+- Sem sync entre dispositivos (mitigado por export)
 
 ## Próximos passos
 
-1. Push da branch e abrir PR.
-2. Conferir CI verde no GitHub.
-3. Merge → redeploy Vercel.
-4. Gerar APK preview (`npm run eas:preview`) e atualizar link no README.
-5. Capturar 2–3 screenshots e substituir o placeholder.
+1. Abrir/atualizar PR `chore/portfolio-quality-pass` → `main`
+2. Confirmar CI verde
+3. Merge + redeploy Vercel se necessário
+4. `npm run eas:preview` quando quiser APK público
 
-## Sugestões para o portfólio
+## Sugestões de portfólio
 
-- Card: “Verbo & Hino — quiz offline Bíblia + Hinário CCB · Expo · Vercel”.
-- Em entrevista: abrir a demo, jogar modo Relógio, mostrar Stats + export, citar o fuzz test e o fix do FileSystem SDK 54.
-- Linkar este repo + https://verbo-hino.vercel.app + https://barujafe.vercel.app/
+- Card: “Verbo & Hino — quiz offline Bíblia + Hinário · Expo · Vercel”
+- Em entrevista: demo Relógio → Stats → export; citar fuzz 24k + fix FileSystem SDK 54 + remoção do import circular
+- Links: repo · https://verbo-hino.vercel.app · https://barujafe.vercel.app/
 
-## Mensagem de commit sugerida
+## Mensagem de commit
 
 ```txt
-chore: improve portfolio quality, docs, tests and stability
+chore: deepen portfolio pass — context extraction, security notes, stronger tests
 ```
 
-## Arquivos-chave desta revisão
+## Arquivos-chave desta 2ª passagem
 
-- `src/utils/exporters.js`
-- `src/utils/questionFactory.js`
-- `src/utils/statistics.js`
-- `src/screens/StatsScreen.js`
-- `src/screens/GameScreen.js`
+- `src/context/AppContext.js`
 - `App.js`
-- `README.md`
-- `docs/*`
-- `.github/workflows/ci.yml`
+- `src/screens/GameScreen.js` / `StatsScreen.js`
+- `src/utils/questionFactory.js`
+- `src/components/VerseCard.js`
+- `scripts/lint.mjs` / `test/logic.test.mjs`
+- `docs/SECURITY_NOTES.md` / `docs/ARCHITECTURE.md` / `docs/HANDOFF.md` / `README.md`

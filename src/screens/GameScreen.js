@@ -25,7 +25,7 @@ import VerseCard from '../components/VerseCard';
 import AnswerButton from '../components/AnswerButton';
 import Hearts from '../components/Hearts';
 
-import { HistoryContext, ThemeModeContext } from '../../App';
+import { HistoryContext, ThemeModeContext } from '../context/AppContext';
 import { addRecord } from '../utils/statistics';
 import { buildAllPoolsAsync } from '../utils/dataLoader';
 import { createQuestion } from '../utils/questionFactory';

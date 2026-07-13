@@ -10,7 +10,7 @@ import { View, Text, StyleSheet, SafeAreaView, ScrollView, Dimensions } from 're
 import { Button, DataTable, Snackbar, SegmentedButtons, Dialog, Portal } from 'react-native-paper';
 import { PieChart } from 'react-native-chart-kit';
 
-import { HistoryContext, ThemeModeContext } from '../../App';
+import { HistoryContext, ThemeModeContext } from '../context/AppContext';
 import { overallAccuracy, accuracyByType, statsBibleByBook, statsHymnByNumero } from '../utils/statistics';
 import { exportHistoryJSON, importHistoryJSON, exportCSV } from '../utils/exporters';
 

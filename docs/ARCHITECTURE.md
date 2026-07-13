@@ -12,7 +12,8 @@ Não há backend. Estado e progresso vivem no dispositivo (AsyncStorage / localS
 ```txt
 ┌─────────────────────────────────────────────┐
 │ App.js                                      │
-│  SafeAreaProvider → Theme + History Context │
+│  SafeAreaProvider + providers               │
+│  src/context/AppContext (History + Theme)   │
 │  PaperProvider + NavigationContainer        │
 └───────────────┬─────────────────────────────┘
                 │
@@ -39,6 +40,7 @@ Não há backend. Estado e progresso vivem no dispositivo (AsyncStorage / localS
 | Camada | Responsabilidade | Onde |
 |---|---|---|
 | UI | Telas, feedback, navegação | `src/screens`, `src/components` |
+| App state | Histórico + tema (contexts) | `src/context/AppContext.js` |
 | Domínio | Perguntas, distratores, tiers | `questionFactory`, `difficulty`, `dataLoader` |
 | Persistência | Histórico e tema | `statistics`, `preferences`, `asyncStorage` |
 | I/O | Export/import arquivos | `exporters` |

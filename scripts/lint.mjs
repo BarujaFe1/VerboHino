@@ -26,6 +26,7 @@ function mustExist(rel) {
 mustExist('App.js');
 mustExist('app.json');
 mustExist('package.json');
+mustExist('src/context/AppContext.js');
 mustExist('src/screens/GameScreen.js');
 mustExist('src/screens/StatsScreen.js');
 mustExist('src/utils/exporters.js');
@@ -35,6 +36,16 @@ mustExist('assets/hinario_pronto.json');
 mustExist('.github/workflows/ci.yml');
 mustExist('docs/AUDIT_REPORT.md');
 mustExist('docs/HANDOFF.md');
+mustExist('docs/SECURITY_NOTES.md');
+
+for (const screen of ['src/screens/GameScreen.js', 'src/screens/StatsScreen.js']) {
+  const src = fs.readFileSync(path.join(root, screen), 'utf8');
+  if (src.includes("from '../../App'") || src.includes('from "../../App"')) {
+    fail(`${screen} não deve importar contextos de App.js (use src/context/AppContext)`);
+  } else {
+    ok(`${screen} sem import circular de App.js`);
+  }
+}
 
 const exporters = fs.readFileSync(path.join(root, 'src/utils/exporters.js'), 'utf8');
 if (!exporters.includes("expo-file-system/legacy")) {

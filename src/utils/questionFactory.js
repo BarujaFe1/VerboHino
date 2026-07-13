@@ -115,6 +115,9 @@ function buildHymnDistractors({ pool, correct, difficulty }) {
 
 export function createQuestion({ gameType, biblePool, hymnPool, difficulty, recentIds }) {
   if (gameType === 'hymn') {
+    if (!hymnPool?.length) {
+      throw new Error('hymnPool vazio: não é possível criar pergunta.');
+    }
     const idFn = (x) => `hymn_${x.hymnNumero}_${x.stanzaNumero}`;
     const correct = pickFromTier(hymnPool, difficulty, recentIds, idFn);
 
@@ -161,6 +164,9 @@ export function createQuestion({ gameType, biblePool, hymnPool, difficulty, rece
   }
 
   // bible
+  if (!biblePool?.length) {
+    throw new Error('biblePool vazio: não é possível criar pergunta.');
+  }
   const idFn = (x) => x.ref;
   const correct = pickFromTier(biblePool, difficulty, recentIds, idFn);
 

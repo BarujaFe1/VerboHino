@@ -39,11 +39,24 @@ async function main() {
   console.log('bible tiers:', JSON.stringify(tiers(biblePool)));
   console.log('hymn tiers:', JSON.stringify(tiers(hymnPool)));
 
+  // Empty pools must fail loudly
+  try {
+    createQuestion({ gameType: 'bible', biblePool: [], hymnPool, difficulty: 'easy', recentIds: new Set() });
+    fail('createQuestion deveria lançar com biblePool vazio');
+  } catch {
+    console.log('ok createQuestion rejeita biblePool vazio');
+  }
+  try {
+    createQuestion({ gameType: 'hymn', biblePool, hymnPool: [], difficulty: 'easy', recentIds: new Set() });
+    fail('createQuestion deveria lançar com hymnPool vazio');
+  } catch {
+    console.log('ok createQuestion rejeita hymnPool vazio');
+  }
+
   // FUZZ: generate many questions for each gameType x difficulty
   const recentIds = new Set();
   const N = 4000;
   for (const gameType of ['bible', 'hymn']) {
-    const pool = gameType === 'bible' ? biblePool : hymnPool;
     for (const difficulty of ['easy', 'medium', 'hard']) {
       let okCount = 0;
       for (let i = 0; i < N; i++) {
@@ -55,13 +68,16 @@ async function main() {
           break;
         }
         if (!q) { fail(`createQuestion retornou undefined (${gameType}/${difficulty})`); break; }
-        // invariants
         if (!Array.isArray(q.options)) { fail(`${gameType}/${difficulty}: options nao é array`); break; }
         if (q.options.length !== 4) { fail(`${gameType}/${difficulty}: options != 4 (${q.options.length})`); break; }
         if (!q.options.includes(q.correctLabel)) { fail(`${gameType}/${difficulty}: correctLabel nao esta em options`); break; }
         const uniq = new Set(q.options);
         if (uniq.size !== q.options.length) { fail(`${gameType}/${difficulty}: options duplicadas`); break; }
         for (const o of q.options) if (typeof o !== 'string' || !o.trim()) { fail(`${gameType}/${difficulty}: opcao invalida`); break; }
+        if (q.options.some((o) => /^Opção \d+$/.test(o))) {
+          fail(`${gameType}/${difficulty}: fallback sintético "Opção N" vazou`);
+          break;
+        }
         if (!q.promptText || typeof q.promptText !== 'string') { fail(`${gameType}/${difficulty}: promptText invalido`); break; }
         if (!q.hint) { fail(`${gameType}/${difficulty}: hint vazio`); break; }
         recentIds.add(q.id);

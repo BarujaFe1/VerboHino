@@ -1,6 +1,6 @@
 import 'react-native-gesture-handler';
 
-import React, { createContext, useEffect, useMemo, useState, useCallback } from 'react';
+import React from 'react';
 import { StatusBar } from 'expo-status-bar';
 import { NavigationContainer } from '@react-navigation/native';
 import { createNativeStackNavigator } from '@react-navigation/native-stack';
@@ -9,65 +9,17 @@ import { SafeAreaProvider } from 'react-native-safe-area-context';
 
 import GameScreen from './src/screens/GameScreen';
 import StatsScreen from './src/screens/StatsScreen';
-import { buildPaperTheme, buildNavTheme, getPalette } from './src/theme';
-import { loadThemeMode, saveThemeMode } from './src/utils/preferences';
-import { loadHistory, saveHistory } from './src/utils/statistics';
-
-export const HistoryContext = createContext({
-  history: [],
-  setHistory: () => {},
-});
-
-export const ThemeModeContext = createContext({
-  themeMode: 'dark',
-  palette: getPalette('dark'),
-  toggleTheme: () => {},
-});
+import {
+  HistoryContext,
+  ThemeModeContext,
+  useAppBootstrap,
+} from './src/context/AppContext';
 
 const Stack = createNativeStackNavigator();
 
 export default function App() {
-  const [themeMode, setThemeMode] = useState('dark');
-  const palette = useMemo(() => getPalette(themeMode), [themeMode]);
-  const paperTheme = useMemo(() => buildPaperTheme(palette), [palette]);
-  const navTheme = useMemo(() => buildNavTheme(palette), [palette]);
-
-  useEffect(() => {
-    (async () => {
-      const saved = await loadThemeMode('dark');
-      setThemeMode(saved);
-    })();
-  }, []);
-
-  const toggleTheme = useCallback(() => {
-    setThemeMode((m) => {
-      const next = m === 'dark' ? 'light' : 'dark';
-      saveThemeMode(next);
-      return next;
-    });
-  }, []);
-
-  const [history, setHistory] = useState([]);
-  const [historyLoaded, setHistoryLoaded] = useState(false);
-
-  useEffect(() => {
-    (async () => {
-      const h = await loadHistory();
-      setHistory(h);
-      setHistoryLoaded(true);
-    })();
-  }, []);
-
-  useEffect(() => {
-    if (!historyLoaded) return;
-    saveHistory(history);
-  }, [history, historyLoaded]);
-
-  const historyValue = useMemo(() => ({ history, setHistory }), [history]);
-  const themeValue = useMemo(
-    () => ({ themeMode, palette, toggleTheme }),
-    [themeMode, palette, toggleTheme]
-  );
+  const { historyValue, themeValue, paperTheme, navTheme, themeMode } = useAppBootstrap();
+  const palette = themeValue.palette;
 
   return (
     <SafeAreaProvider>

@@ -10,8 +10,16 @@
 
 Verbo & Hino é um app Expo/React Native maduro para um projeto pessoal: quiz gamificado de Bíblia (ARC) e Hinário CCB, offline-first, com web na Vercel e builds Android via EAS. A lógica de domínio (pools, distratores, estatísticas) é sólida e já tinha fuzz de 24k perguntas. O maior gap para portfólio era **documentação estruturada, CI pública, README orientado a recrutador e um bug crítico de export/import no mobile** (`expo-file-system` SDK 54).
 
-**Nota atual (após este passe):** **8.4 / 10**  
-**Nota anterior estimada:** ~6.8 / 10 (produto bom, packaging de portfólio incompleto, export nativo quebrado)
+**Nota atual (após 2ª passagem):** **8.7 / 10**  
+**Nota após 1º passe:** 8.4 / 10  
+**Nota anterior estimada:** ~6.8 / 10
+
+### Incremento desta passagem
+- Remoção de import circular (telas → App)
+- Camada `src/context`
+- SECURITY_NOTES + lint/test mais rígidos
+- Guards de pool vazio na factory
+- A11y do VerseCard
 
 ---
 
