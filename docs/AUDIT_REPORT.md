@@ -94,9 +94,11 @@ Verbo & Hino é um app Expo/React Native maduro para um projeto pessoal: quiz ga
 - [x] Build web (`npm run export:web`)
 - [x] Bugs principais corrigidos
 - [x] README de portfólio
-- [x] Docs de arquitetura / decisões / testes / deploy / handoff
+- [x] Docs de arquitetura / decisões / testes / deploy / handoff / security
 - [x] CI GitHub Actions
 - [x] `.env.example` + `.gitignore`
 - [x] UX revisada (empty/confirm/a11y)
-- [ ] Push remoto (executar se autorizado)
-- [ ] Redeploy Vercel (manual após merge)
+- [x] Contextos extraídos (`src/context`) — sem import circular
+- [x] Push remoto (`chore/portfolio-quality-pass`)
+- [x] PR aberto → `main` ([#1](https://github.com/BarujaFe1/VerboHino/pull/1))
+- [ ] Merge + redeploy Vercel
