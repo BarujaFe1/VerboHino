@@ -11,6 +11,7 @@
     "lint": "node scripts/lint.mjs",
     "test": "node scripts/run-tests.mjs",
     "ci": "npm run lint && npm test && npm run export:web",
+    "screenshots": "node scripts/capture-screenshots.mjs",
     "eas:preview": "eas build --profile preview --platform android"
   },
   "dependencies": {
@@ -37,7 +38,8 @@
   },
   "devDependencies": {
     "@babel/core": "^7.27.0",
-    "esbuild": "^0.28.1"
+    "esbuild": "^0.28.1",
+    "playwright": "^1.49.1"
   },
   "private": true
 }

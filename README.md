@@ -25,15 +25,20 @@
 
 ## Preview / Screenshot
 
-Live demo (recomendado): **[verbo-hino.vercel.app](https://verbo-hino.vercel.app)**
+Live demo: **[verbo-hino.vercel.app](https://verbo-hino.vercel.app)**
 
 <p align="center">
-  <img src="./assets/verbo_hino_wordmark.png" alt="Verbo & Hino wordmark" width="280" />
-  <br />
-  <img src="./assets/icon.png" alt="Ícone Verbo & Hino" width="120" />
+  <img src="./assets/screenshots/01-game-bible-mobile.png" alt="Quiz Bíblia — mobile" width="220" />
+  <img src="./assets/screenshots/02-game-hymn-mobile.png" alt="Quiz Hinário — mobile" width="220" />
+  <img src="./assets/screenshots/03-game-timeattack-mobile.png" alt="Modo Relógio — mobile" width="220" />
 </p>
 
-> Abra a demo web para ver gameplay, modos, tema e estatísticas. Screenshots de loja (Play Store) ficam no roadmap.
+<p align="center">
+  <img src="./assets/screenshots/04-stats-mobile.png" alt="Estatísticas vazias — mobile" width="220" />
+  <img src="./assets/screenshots/05-game-desktop.png" alt="Quiz desktop" width="420" />
+</p>
+
+Captura automática: `node scripts/capture-screenshots.mjs` · roteiro em [`docs/demo/SCREENSHOT_CAPTURE.md`](./docs/demo/SCREENSHOT_CAPTURE.md)
 
 ---
 
@@ -64,6 +69,7 @@ Estudar Bíblia e hinário costuma ser **passivo**: ler, sublinhar, esquecer. Me
 | Ajudas | 50/50 e dica (testamento / faixa numérica) |
 | Stats | Top 5, Top 15, acurácia, export JSON/CSV, import com confirmação |
 | UX | Tema claro/escuro, haptics, sons, empty states |
+| Qualidade | Fuzz ~24k perguntas, CI, docs de arquitetura/segurança |
 
 ## Arquitetura (resumo)
 
@@ -133,8 +139,9 @@ Ver [`docs/TECHNICAL_DECISIONS.md`](./docs/TECHNICAL_DECISIONS.md).
 
 ## Roadmap
 
-- [ ] Screenshots reais no README / store
-- [ ] Acessibilidade avançada (TalkBack/VoiceOver audit)
+- [x] Screenshots reais no README (web mobile/desktop)
+- [x] Checklist de acessibilidade documentado
+- [ ] Audit TalkBack/VoiceOver em dispositivo físico
 - [ ] Modo “versículo → livro” e “hino → compositor”
 - [ ] Sync opcional / backup em nuvem
 - [ ] Build iOS via EAS
@@ -187,8 +194,10 @@ Live demo: https://verbo-hino.vercel.app
 | [`docs/TECHNICAL_DECISIONS.md`](./docs/TECHNICAL_DECISIONS.md) | ADRs / trade-offs |
 | [`docs/TESTING.md`](./docs/TESTING.md) | Estratégia de testes |
 | [`docs/DEPLOYMENT.md`](./docs/DEPLOYMENT.md) | Vercel + EAS |
-| [`docs/SECURITY_NOTES.md`](./docs/SECURITY_NOTES.md) | Segurança e privacidade |
-| [`docs/HANDOFF.md`](./docs/HANDOFF.md) | Handoff da revisão |
+| [`docs/ACCESSIBILITY.md`](./docs/ACCESSIBILITY.md) | Checklist a11y |
+| [`docs/demo/INTERVIEW_DEMO.md`](./docs/demo/INTERVIEW_DEMO.md) | Roteiro 3–5 min |
+| [`docs/PORTFOLIO_HANDOFF.md`](./docs/PORTFOLIO_HANDOFF.md) | Handoff de portfólio |
+| [`docs/CHANGELOG.md`](./docs/CHANGELOG.md) | Changelog |
 
 ## Autor
 
