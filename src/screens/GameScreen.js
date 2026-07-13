@@ -454,7 +454,7 @@ export default function GameScreen({ navigation }) {
             onValueChange={setMode}
             buttons={[
               { value: 'classic', label: 'Clássico' },
-              { value: 'survival', label: 'Sobrevivência' },
+              { value: 'survival', label: 'Vidas' },
               { value: 'timeattack', label: 'Relógio' },
             ]}
           />
