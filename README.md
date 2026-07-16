@@ -2,207 +2,180 @@
   <img src="./assets/icon.png" alt="Verbo & Hino Logo" width="120" height="120" />
 
   <h1>Verbo & Hino</h1>
-  <p><strong>Gamificando o aprendizado cristão</strong> — quiz offline de Bíblia (ARC) e Hinário da CCB.</p>
-  <p><em>Christian learning, gamified — offline Bible & CCB hymnal quizzes.</em></p>
+
+  <p><strong>Gamificação do aprendizado cristão — quizzes offline de Bíblia (ARC) e Hinário CCB.</strong></p>
+  <p><strong>Christian learning, gamified — offline Bible (ARC) and CCB hymnal quizzes.</strong></p>
 
   <p>
-    <a href="https://verbo-hino.vercel.app"><img src="https://img.shields.io/badge/demo-web-success" alt="Demo web" /></a>
-    <img src="https://img.shields.io/badge/version-2.0.0-blue.svg" alt="Version" />
-    <img src="https://img.shields.io/badge/Expo-54-000020.svg?logo=expo" alt="Expo" />
-    <img src="https://img.shields.io/badge/React%20Native-0.81-61DAFB.svg?logo=react" alt="RN" />
-    <img src="https://img.shields.io/badge/license-MIT-green.svg" alt="MIT" />
+    <a href="#pt-br">PT-BR</a>
+     · 
+    <a href="#english">English</a>
+     · 
+    <a href="#live-demo">Live Demo</a>
+     · 
+    <a href="#stack">Stack</a>
+     · 
+    <a href="#architecture">Architecture</a>
+     · 
+    <a href="#quick-start">Quick Start</a>
+     · 
+    <a href="#author">Author</a>
   </p>
 
   <p>
-    <a href="https://verbo-hino.vercel.app">Demo ao vivo</a> ·
-    <a href="#pt-br">Português</a> ·
-    <a href="#english">English</a> ·
-    <a href="./docs/ARCHITECTURE.md">Arquitetura</a>
+    <img alt="Expo-54" src="https://img.shields.io/badge/Expo-54-000020?style=for-the-badge&logo=expo&logoColor=white" />
+    <img alt="React%20Native" src="https://img.shields.io/badge/React%20Native-61DAFB?style=for-the-badge&logo=react&logoColor=white" />
+    <img alt="TypeScript" src="https://img.shields.io/badge/TypeScript-3178C6?style=for-the-badge&logo=typescript&logoColor=white" />
+    <img alt="Status-Deployed" src="https://img.shields.io/badge/Status-Deployed-22C55E?style=for-the-badge" />
+    <img alt="License-MIT" src="https://img.shields.io/badge/License-MIT-yellow?style=for-the-badge" />
+  </p>
+
+  <p>
+    <a href="https://verbo-hino.vercel.app"><strong>Live Demo</strong></a>
+     · 
+    <a href="https://github.com/BarujaFe1/VerboHino"><strong>Repo</strong></a>
+     · 
+    <a href="https://barujafe.vercel.app/"><strong>Portfolio</strong></a>
+     · 
+    <a href="https://www.linkedin.com/in/barujafe/"><strong>LinkedIn</strong></a>
   </p>
 </div>
 
----
 
-## Preview / Screenshot
-
-Live demo: **[verbo-hino.vercel.app](https://verbo-hino.vercel.app)**
-
-<p align="center">
-  <img src="./assets/screenshots/01-game-bible-mobile.png" alt="Quiz Bíblia — mobile" width="220" />
-  <img src="./assets/screenshots/02-game-hymn-mobile.png" alt="Quiz Hinário — mobile" width="220" />
-  <img src="./assets/screenshots/03-game-timeattack-mobile.png" alt="Modo Relógio — mobile" width="220" />
-</p>
-
-<p align="center">
-  <img src="./assets/screenshots/04-stats-mobile.png" alt="Estatísticas vazias — mobile" width="220" />
-  <img src="./assets/screenshots/05-game-desktop.png" alt="Quiz desktop" width="420" />
-</p>
-
-Captura automática: `node scripts/capture-screenshots.mjs` · roteiro em [`docs/demo/SCREENSHOT_CAPTURE.md`](./docs/demo/SCREENSHOT_CAPTURE.md)
+> **Product note:** Expo/React Native app with a **web demo** on Vercel. Content is for study/gamification — not an official CCB publication channel.
 
 ---
 
-<a id="pt-br"></a>
+## PT-BR
 
-## O problema real
+### Visão geral
+O **Verbo & Hino** gamifica o estudo com quizzes da Bíblia (ARC) e do Hinário CCB: modos Clássico, Sobrevivência e Relógio, dificuldades, estatísticas, exportação e temas claro/escuro.
 
-Estudar Bíblia e hinário costuma ser **passivo**: ler, sublinhar, esquecer. Membros e jovens da CCB (e cristãos em geral) precisam de uma forma **ativa, mensurável e divertida** de memorizar referências e hinos — sem criar conta, sem internet obrigatória e sem complexidade.
+### Problema
+Memorização e revisão de hinos/versículos costumam ser manuais e pouco motivadoras — sem feedback rápido nem histórico.
 
-## A solução
+### Para quem
+Membros e estudantes que querem treinar Bíblia/hinário de forma leve no celular (ou no demo web).
 
-**Verbo & Hino** transforma estudo em jogo:
+### Funcionalidades
+- Quizzes de Bíblia e Hinário
+- Modos Clássico, Sobrevivência e Relógio
+- Níveis de dificuldade e estatísticas
+- Exportação de dados e tema claro/escuro
+- Demo web (Expo web) em Vercel
 
-- Mostra um **versículo** → você escolhe a referência correta.
-- Mostra uma **estrofe** → você escolhe o hino (número + título).
-- Três dificuldades, três modos, streak, ajudas, estatísticas locais e tema claro/escuro.
-- Uma base **Expo** gera **mobile + web**.
+### Escopo e limites (honestos)
+- App de estudo/gamificação — **não** substitui materiais oficiais da congregação
+- Web demo pode diferir do app nativo em APIs de device
+- Conteúdo e licenciamento de textos: use de acordo com as fontes embutidas no projeto
 
-## Principais funcionalidades
+---
 
-| Área | O que entrega |
+## English
+
+### Overview
+**Verbo & Hino** gamifies study with Bible (ARC) and CCB hymnal quizzes: Classic, Survival and Clock modes, difficulties, stats, export and light/dark themes.
+
+### Problem
+Hymn/verse practice is often manual and unmotivating — little feedback and no history.
+
+### Who it is for
+Members and learners who want light Bible/hymnal practice on mobile (or the web demo).
+
+### Features
+- Bible and hymnal quizzes
+- Classic, Survival and Clock modes
+- Difficulty levels and statistics
+- Data export and light/dark theme
+- Expo web demo on Vercel
+
+### Scope and honest limits
+- Study/gamification app — **not** an official congregational publication
+- Web demo may differ from native device APIs
+- Respect embedded source/licensing of texts in the repo
+
+---
+
+## Live Demo
+
+| Surface | URL |
 |---|---|
-| Quiz Bíblia | Versículo → referência (livro cap:verso) |
-| Quiz Hinário | Estrofe → Nº + título |
-| Dificuldade | Fácil / Médio / Difícil por popularidade |
-| Modos | Clássico · Sobrevivência (3 vidas) · Relógio |
-| Progressão | Pontos, streak, multiplicador x2 |
-| Ajudas | 50/50 e dica (testamento / faixa numérica) |
-| Stats | Top 5, Top 15, acurácia, export JSON/CSV, import com confirmação |
-| UX | Tema claro/escuro, haptics, sons, empty states |
-| Qualidade | Fuzz ~24k perguntas, CI, docs de arquitetura/segurança |
+| **Public lab** | [https://verbo-hino.vercel.app](https://verbo-hino.vercel.app) |
+| **GitHub** | see Repo badge above |
 
-## Arquitetura (resumo)
+**How to try:** pick Bible or Hymnal → play a mode → check stats → try dark/light theme.
 
-```txt
-App.js (Contextos + Navigation)
-  ├─ GameScreen  → dataLoader → questionFactory
-  └─ StatsScreen → statistics + exporters
-assets/ (ARC + hinário + popularidade + áudio)
-```
 
-Detalhes: [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md)
+
+## Screenshots
+
+<table>
+  <tr>
+    <td width="50%"><img src="./assets/screenshots/01-game-bible-mobile.png" alt="Bible quiz" /><br /><sub><strong>Bible quiz</strong></sub></td>
+    <td width="50%"><img src="./assets/screenshots/02-game-hymn-mobile.png" alt="Hymnal quiz" /><br /><sub><strong>Hymnal quiz</strong></sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./assets/screenshots/03-game-timeattack-mobile.png" alt="Time attack" /><br /><sub><strong>Time attack</strong></sub></td>
+    <td width="50%"><img src="./assets/screenshots/04-stats-mobile.png" alt="Stats" /><br /><sub><strong>Stats</strong></sub></td>
+  </tr>
+  <tr>
+    <td width="50%"><img src="./assets/screenshots/05-game-desktop.png" alt="Desktop web" /><br /><sub><strong>Desktop web</strong></sub></td>
+    <td width="50%"></td>
+  </tr>
+</table>
+
+
 
 ## Stack
 
-- Expo 54 · React Native 0.81 · React 19
-- React Navigation 7 · React Native Paper 5
-- AsyncStorage · Chart Kit · Expo AV / Haptics / Sharing / FileSystem / DocumentPicker
-- Vercel (web estática) · EAS Build (Android)
-
-## Demo local
-
-```bash
-git clone https://github.com/BarujaFe1/VerboHino.git
-cd VerboHino
-npm install
-npm start          # Expo Dev Tools
-npm run web        # browser
-```
-
-Requisitos: **Node.js LTS (22+)**.
-
-## Comandos úteis
-
-| Comando | Função |
+| Layer | Technology |
 |---|---|
-| `npm start` | Dev server Expo |
-| `npm run web` | Web local |
-| `npm test` | Fuzz + stats/export |
-| `npm run lint` | Checagens estruturais |
-| `npm run export:web` | Bundle estático em `dist/` |
-| `npm run ci` | lint + test + export |
-| `npm run eas:preview` | APK preview (EAS) |
+| App | Expo 54, React Native, TypeScript |
+| Demo | Expo web on Vercel |
 
-## Variáveis de ambiente
+---
 
-Nenhuma obrigatória. O app é offline-first. Veja [`.env.example`](./.env.example).
+## Architecture
 
-## Testes
+See [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) for deeper notes. High level: quiz engines + local stats + optional web export.
+
+---
+
+## Quick Start
 
 ```bash
-npm test
+npm install
+npx expo start
 ```
 
-- ~24k perguntas geradas com invariantes (4 opções únicas, hint, label correta).
-- Stats, cap de histórico, sanitize de import, CSV/JSON.
+Web: follow Expo web scripts used for the Vercel demo.
 
-Mais: [`docs/TESTING.md`](./docs/TESTING.md)
+---
 
-## Decisões técnicas e trade-offs
+## Technical decisions
 
-- **Sem backend** → privacidade e simplicidade; sem sync na nuvem.
-- **JS + testes de domínio** → entrega rápida; tipagem estática fica no roadmap.
-- **`expo-file-system/legacy`** → compatível com SDK 54 sem reescrever I/O.
-- **Dificuldade por popularidade** → justo para o público; não é exegese.
+- **Offline-friendly quiz loop** for study without constant network
+- **Multiple modes** to vary practice pressure (classic vs clock)
+- **Web demo** for portfolio reviewers without installing APK
 
-Ver [`docs/TECHNICAL_DECISIONS.md`](./docs/TECHNICAL_DECISIONS.md).
+---
 
 ## Roadmap
 
-- [x] Screenshots reais no README (web mobile/desktop)
-- [x] Checklist de acessibilidade documentado
-- [ ] Audit TalkBack/VoiceOver em dispositivo físico
-- [ ] Modo “versículo → livro” e “hino → compositor”
-- [ ] Sync opcional / backup em nuvem
-- [ ] Build iOS via EAS
-- [ ] Migração gradual para TypeScript nos utils
-
-## Status atual
-
-**Produção web v2.0.0** · lógica de domínio estável · CI configurada · export mobile corrigido no SDK 54.
-
-## O que este projeto demonstra
-
-- Produto completo (não só UI): conteúdo grande, regras de jogo, persistência, export.
-- Engenharia Expo multiplataforma (mobile + web estático).
-- Gamificação com feedback sensorial e métricas locais.
-- Qualidade: fuzz tests, CI, docs de arquitetura e handoff.
-- Sensibilidade a privacidade (offline, sem tracking obrigatório).
-
-## Como eu apresentaria em entrevista
-
-1. **Problema:** estudo passivo → retenção baixa.  
-2. **Produto:** quiz dual (Bíblia + Hinário) com modos e dificuldade por popularidade.  
-3. **Engenharia:** pools em runtime a partir de ARC completo + 485 hinos; distratores por dificuldade.  
-4. **Entrega:** mesma codebase na Vercel e no Android (EAS).  
-5. **Qualidade:** mostro `npm test` (24k perguntas) e o bug do FileSystem no SDK 54 que corrigi.  
-6. **Trade-off consciente:** offline-first vs. sync — e como export/import mitiga.
+- Richer stats and review of wrong answers
+- Content packs / difficulty tuning
+- Native distribution polish
 
 ---
 
-<a id="english"></a>
+## Author
 
-## English (short)
+**Felipe Alirio Baruja** — data / product / full-stack portfolio.
 
-**Verbo & Hino** is an offline-first Expo app that gamifies Christian learning: identify Bible references from verses and CCB hymns from stanzas. It ships Classic / Survival / Time Attack modes, difficulty tiers, assists, local stats with JSON/CSV export, and a static web build on Vercel.
+- Portfolio: [https://barujafe.vercel.app/](https://barujafe.vercel.app/)
+- GitHub: [https://github.com/BarujaFe1](https://github.com/BarujaFe1)
+- LinkedIn: [https://www.linkedin.com/in/barujafe/](https://www.linkedin.com/in/barujafe/)
 
-```bash
-npm install && npm start
-npm test && npm run export:web
-```
-
-Live demo: https://verbo-hino.vercel.app
-
----
-
-## Docs
-
-| Doc | Conteúdo |
-|---|---|
-| [`docs/AUDIT_REPORT.md`](./docs/AUDIT_REPORT.md) | Auditoria e nota |
-| [`docs/ARCHITECTURE.md`](./docs/ARCHITECTURE.md) | Arquitetura |
-| [`docs/TECHNICAL_DECISIONS.md`](./docs/TECHNICAL_DECISIONS.md) | ADRs / trade-offs |
-| [`docs/TESTING.md`](./docs/TESTING.md) | Estratégia de testes |
-| [`docs/DEPLOYMENT.md`](./docs/DEPLOYMENT.md) | Vercel + EAS |
-| [`docs/ACCESSIBILITY.md`](./docs/ACCESSIBILITY.md) | Checklist a11y |
-| [`docs/demo/INTERVIEW_DEMO.md`](./docs/demo/INTERVIEW_DEMO.md) | Roteiro 3–5 min |
-| [`docs/PORTFOLIO_HANDOFF.md`](./docs/PORTFOLIO_HANDOFF.md) | Handoff de portfólio |
-| [`docs/CHANGELOG.md`](./docs/CHANGELOG.md) | Changelog |
-
-## Autor
-
-**Felipe Alirio Baruja (BarujaFe)**  
-[GitHub](https://github.com/BarujaFe1) · [LinkedIn](https://linkedin.com/in/barujafe) · [Portfólio](https://barujafe.vercel.app/)
 
 ## License
 
